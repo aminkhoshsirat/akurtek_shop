@@ -1,0 +1,1446 @@
+{% extends 'parent/base.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+    <div class="content">
+        <section>
+            <div class="bg-gradiant-account">
+                <div class="area-shape-bottom">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 260">
+                        <polygon fill="currentColor" points="0,257 0,260 3000,260 3000,0"></polygon>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <section class="mb-5 area-content-paccount">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                        <div class="sidebar-account ">
+                            <div class="avatar-user d-flex flex-column justify-content-center align-items-center mb-4">
+                                <img class="img-avatar-user" src="images/img11.jpg">
+                                <div class="name-avatar-user">
+                                    <h4>فاطمه حمزه عوفی</h4>
+                                </div>
+                            </div>
+                            <div class="account-menu d-none d-lg-block">
+                                <div class="nav flex-column nav-pills nav-pills-account-menu" id="v-pills-tab"
+                                    role="tablist" aria-orientation="vertical">
+                                    <button class="nav-link border-bottom-none ">
+                                        <h3>داشبورد</h3>
+                                    </button>
+                                    <button class="nav-link  active" id="favorits-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content1" type="button" role="tab" aria-controls="content1"
+                                        aria-selected="false">
+                                        <i class="fal fa-heart ms-2"></i>علاقه مندی ها <span
+                                            class="dropdown-user-account-meta">6</span>
+                                    </button>
+                                    <button class="nav-link" id="comment-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content2" type="button" role="tab" aria-controls="content2"
+                                        aria-selected="false">
+                                        <i class="fal fa-comment-alt ms-2"></i>
+                                        دیدگاهها
+                                        <span class="dropdown-user-account-meta">5</span>
+                                    </button>
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content3" type="button" role="tab" aria-controls="content9"
+                                        aria-selected="false">
+
+                                        <i class="fal fa-map-marker-alt  ms-2"></i>
+                                        نشانی ها
+                                        <span class="dropdown-user-account-meta">15000000</span>
+                                    </button>
+                                    <button class="nav-link " id="orders-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content4" type="button" role="tab" aria-controls="content4"
+                                        aria-selected="true">
+                                        <i class="fal fa-cart-arrow-down  ms-2"></i>
+                                        سفارش ها
+                                        <span class="dropdown-user-account-meta">1</span> </a></li>
+                                    </button>
+                                    <button class="nav-link border-bottom-none">
+                                        <h3>تنظیمات حساب کاربری</h3>
+                                    </button>
+                                    <button class="nav-link" id="infoprofile-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content5" type="button" role="tab" aria-controls="content5"
+                                        aria-selected="false">
+                                        اطلاعات پروفایل
+                                    </button>
+                                    <button class="nav-link" id="changePassword-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content6" type="button" role="tab" aria-controls="content6"
+                                        aria-selected="false">
+                                        تغییر
+                                        رمز عبور
+                                    </button>
+                                    <button class="nav-link" id="changTel-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content7" type="button" role="tab" aria-controls="content7"
+                                        aria-selected="false">
+                                        تغییر
+                                        شماره تلفن
+                                    </button>
+                                    <button class="nav-link" id="setting-numberaccount-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content8" type="button" role="tab" aria-controls="content8"
+                                        aria-selected="false">
+                                        تنظیمات شماره حساب
+                                    </button>
+
+                                    <button class="nav-link d-flex align-items-center justify-content-between"
+                                        id="notification-tab" data-bs-toggle="pill" data-bs-target="#content9"
+                                        type="button" role="tab" aria-controls="content9" aria-selected="false">
+                                        اعلان ها
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </button>
+                                    <button class="nav-link" id="logout" type="button">
+                                        <i class="fal fa-sign-out-alt  ms-2"></i>خروج
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="area-account-menu-collapse d-block d-lg-none">
+                                <div class="area-btn-collapse-accountMenu  mb-4">
+                                            <a class="btn btn-5" data-bs-toggle="collapse" href="#area-account-menu" role="button" aria-expanded="false" aria-controls="area-account-menu">
+                                                منو اکانت
+                                                <i class="fas fa-bars me-2"></i>
+                                            </a>
+                                </div>
+                                <div class="collapse account-menu" id="area-account-menu">
+                                    <div class="nav flex-column nav-pills nav-pills-account-menu" id="v-pills-tab"
+                                    role="tablist" aria-orientation="vertical">
+                                    <button class="nav-link border-bottom-none ">
+                                        <h3>داشبورد</h3>
+                                    </button>
+                                    <button class="nav-link active" id="favorits-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content1" type="button" role="tab" aria-controls="content1"
+                                        aria-selected="false">
+                                        <i class="fal fa-heart ms-2"></i>علاقه مندی ها <span
+                                            class="dropdown-user-account-meta">6</span>
+                                    </button>
+                                    <button class="nav-link" id="comment-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content2" type="button" role="tab" aria-controls="content2"
+                                        aria-selected="false">
+                                        <i class="fal fa-comment-alt ms-2"></i>
+                                        دیدگاهها
+                                        <span class="dropdown-user-account-meta">5</span>
+                                    </button>
+                                    <button class="nav-link " id="contact-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content3" type="button" role="tab" aria-controls="content9"
+                                        aria-selected="false">
+                                        <i class="fal fa-map-marker-alt  ms-2"></i>
+                                        نشانی ها
+                                        <span class="dropdown-user-account-meta">15000000</span>
+                                    </button>
+                                    <button class="nav-link " id="orders-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content4" type="button" role="tab" aria-controls="content4"
+                                        aria-selected="true">
+                                        <i class="fal fa-cart-arrow-down  ms-2"></i>
+                                        سفارش ها
+                                        <span class="dropdown-user-account-meta">1</span> </a></li>
+                                    </button>
+                                    <button class="nav-link border-bottom-none">
+                                        <h3>تنظیمات حساب کاربری</h3>
+                                    </button>
+                                    <button class="nav-link" id="infoprofile-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content5" type="button" role="tab" aria-controls="content5"
+                                        aria-selected="false">
+                                        اطلاعات پروفایل
+                                    </button>
+                                    <button class="nav-link" id="changePassword-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content6" type="button" role="tab" aria-controls="content6"
+                                        aria-selected="false">
+                                    تغییر
+                                        رمز عبور
+                                    </button>
+                                    <button class="nav-link" id="changTel-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content7" type="button" role="tab" aria-controls="content7"
+                                        aria-selected="false">
+                                        تغییر
+                                        شماره تلفن
+                                    </button>
+                                    <button class="nav-link" id="setting-numberaccount-tab" data-bs-toggle="pill"
+                                        data-bs-target="#content8" type="button" role="tab" aria-controls="content8"
+                                        aria-selected="false">
+                                        تنظیمات شماره حساب
+                                    </button>
+                                    <button class="nav-link d-flex align-items-center justify-content-between"
+                                        id="notification-tab" data-bs-toggle="pill" data-bs-target="#content9"
+                                        type="button" role="tab" aria-controls="content9" aria-selected="false">
+                                        اعلان ها
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </button>
+                                    <button class="nav-link" id="logout" type="button">
+                                        <i class="fal fa-sign-out-alt  ms-2"></i>خروج
+                                    </button>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <div class="tab-content tab-content-account-user" id="myTabContent">
+                            <div class="tab-pane fade show active" id="content1" role="tabpanel"
+                                aria-labelledby="favorits-tab">
+                                <div
+                                    class="header-tab-content-account d-flex justify-content-between align-items-center mb-4">
+                                    <h1 class="title-tabcontent-account ms-2">
+                                        علاقه مندی ها
+                                        <span class="count-content-tab me-2">6</span>
+                                    </h1>
+                                    <form>
+                                        <button class="btn btn-remove-favorites" type="button"><i
+                                                class="fas fa-trash-alt ms-2"></i>حذف همه</button>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <div
+                                        class="col-12   col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart product_cart-account">
+                                            <a class="card-floating-icon" href="#"> <i class="fas fa-trash-alt"></i></a>
+                                            <a href="#" class="card_product_img"><img src="images/shoes541.jpg"
+                                                    class="img-fluid"></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>کفش اسپرت </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">350000تومان</del><span>
+                                                        120000
+                                                        تومان</span></div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon "><i class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="p-0"><i class="fal fa-cart-plus"></i><span
+                                                            class="tooltip-site tooltip-cardFooter-account"> سبد
+                                                            خرید </span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart product_cart-account">
+                                            <a class="card-floating-icon" href="#"> <i class="fas fa-trash-alt"></i></a>
+                                            <a href="#" class="card_product_img"><img src="images/kolah757.jpg"
+                                                    class="img-fluid"></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>کلاه آفتاب گیر </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">15000تومان</del><span>
+                                                        12000 تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="p-0"><i class="fal fa-cart-plus"></i><span
+                                                            class="tooltip-site tooltip-cardFooter-account"> سبد
+                                                            خرید </span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart product_cart-account">
+                                            <a class="card-floating-icon" href="#"> <i class="fas fa-trash-alt"></i></a>
+                                            <a href="#" class="card_product_img"><img src="images/hansfari78.jpg"
+                                                    class="img-fluid"></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>هدفون بی سیم </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">1500000تومان</del><span>
+                                                        120000
+                                                        تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon "><i class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="p-0"><i class="fal fa-cart-plus"></i><span
+                                                            class="tooltip-site tooltip-cardFooter-account"> سبد
+                                                            خرید </span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart product_cart-account">
+                                            <a class="card-floating-icon" href="#"> <i class="fas fa-trash-alt"></i></a>
+                                            <a href="#" class="card_product_img"><img src="images/pirhan587.jpg"
+                                                    class="img-fluid"></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>پیراهن مردانه</h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">20000تومان</del><span>
+                                                        150000
+                                                        تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="p-0"><i class="fal fa-cart-plus"></i><span
+                                                            class="tooltip-site tooltip-cardFooter-account"> سبد
+                                                            خرید </span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart product_cart-account">
+                                            <a class="card-floating-icon" href="#"> <i class="fas fa-trash-alt"></i></a>
+                                            <a href="#" class="card_product_img"><img src="images/spiker75.jpg"
+                                                    class="img-fluid"></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>اسپیکر با کنترل صدا </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">1500000تومان</del><span>
+                                                        120000
+                                                        تومان</span></div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="p-0"><i class="fal fa-cart-plus"></i><span
+                                                            class="tooltip-site tooltip-cardFooter-account"> سبد
+                                                            خرید </span></a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart product_cart-account">
+                                            <a class="card-floating-icon" href="#"> <i class="fas fa-trash-alt"></i></a>
+                                            <a href="#" class="card_product_img"><img src="images/kif75.jpg"
+                                                    class="img-fluid"></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>کوله پشتی </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">15000تومان</del><span>
+                                                        12000 تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon "><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="p-0"><i class="fal fa-cart-plus"></i><span
+                                                            class="tooltip-site tooltip-cardFooter-account"> سبد
+                                                            خرید </span></a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="social-Icon-singleProduct d-flex align-items-center ">
+                                    <span>اشتراک گذاری لیست: </span>
+                                    <div class="area-socialIcon d-flex me-3">
+                                        <a href="http://www.facebook.com" class="icon facebook"><span
+                                                class="tooltip-site">Facebook</span></a>
+                                        <a href="http://www.github.com" class="icon instegram"><span
+                                                class="tooltip-site">instegram</span></a>
+                                        <a href="http://www.dribble.com" class="icon linkedin"><span
+                                                class="tooltip-site">linkedin</span></a>
+                                        <a href="http://www.twitter.com" class="icon twitter"><span
+                                                class="tooltip-site">Twitter</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="content2" role="tabpanel"
+                                aria-labelledby="v-pills-profile-tab">
+                                <div
+                                    class="header-tab-content-account d-sm-flex justify-content-between align-items-center mb-4">
+                                    <h1 class="title-tabcontent-account mb-3 mb-sm-0">
+                                        دیدگاهها
+                                        <span class="count-content-tab me-2">6</span>
+                                    </h1>
+                                    <div
+                                        class="box-select-sort d-flex align-items-center justify-content-start justify-content-sm-end">
+                                        <label class="lable-select-sort ms-2" for="FormCustomSelect">مرتب سازی براساس:
+                                        </label>
+                                        <!-- <select class="custom-select " id="FormCustomSelect">
+                                            <option selected="">قدیمی ترین</option>
+                                            <option value="1">محبوب ترین</option>
+                                            <option value="2">رتبه بالا</option>
+                                            <option value="3">رتبه پایین</option>
+                                        </select> -->
+                                        <select class="form-select custom-select"  id="FormCustomSelect" aria-label="Default select example">
+                                            <option selected="">قدیمی ترین</option>
+                                            <option value="1">محبوب ترین</option>
+                                            <option value="2">رتبه بالا</option>
+                                            <option value="3">رتبه پایین</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="row d-flex align-items-center mb-4">
+                                    <div class="col-12 col-md-4 mb-4 mb-md-0 pb-1 pb-md-0">
+                                        <div class="rating-product">
+                                            <div class="star_rating-singleProduct d-flex mb-3">
+                                                <div class="star_rating ms-3">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <span>
+                                                    امتیاز کلی
+                                                    <span>(4.2)</span>
+                                                </span>
+                                            </div>
+                                            <p>
+                                                براساس 15 رای (80%)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-8 pr-md-4 pr-lg-3">
+                                        <div class="area-rating-progressbar">
+                                            <div class="item-rating-progressbar d-flex align-items-center mb-2">
+                                                <div class="d-flex align-items-center ms-3">
+                                                    <i class="far fa-star"></i>
+                                                    <span class="me-1">5</span>
+                                                </div>
+                                                <div class="progress w-100 ms-3">
+                                                    <div class="progress-bar  progress-bar-striped progress-bar-animated"
+                                                        role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: 75%;background-color:#ff6a00">
+                                                    </div>
+                                                </div>
+                                                <div class=""> <span>5</span></div>
+                                            </div>
+                                            <div class="item-rating-progressbar d-flex align-items-center mb-2">
+                                                <div class="d-flex align-items-center ms-3">
+                                                    <i class="far fa-star"></i>
+                                                    <span class="me-1">4</span>
+                                                </div>
+                                                <div class="progress w-100 ms-3">
+                                                    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+                                                        role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: 25%"></div>
+                                                </div>
+                                                <div class=""> <span>4</span></div>
+                                            </div>
+                                            <div class="item-rating-progressbar d-flex align-items-center mb-2">
+                                                <div class="d-flex align-items-center ms-3">
+                                                    <i class="far fa-star"></i>
+                                                    <span class="me-1">3</span>
+                                                </div>
+                                                <div class="progress w-100 ms-3">
+                                                    <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated"
+                                                        role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: 50%"></div>
+                                                </div>
+                                                <div class=""> <span>3</span></div>
+                                            </div>
+                                            <div class="item-rating-progressbar d-flex align-items-center mb-2">
+                                                <div class="d-flex align-items-center ms-3">
+                                                    <i class="far fa-star"></i>
+                                                    <span class="me-1">2</span>
+                                                </div>
+                                                <div class="progress w-100 ms-3">
+                                                    <div class="progress-bar  progress-bar-striped progress-bar-animated"
+                                                        role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="width: 80%;background-color:#07a005;">
+                                                    </div>
+                                                </div>
+                                                <div class=""> <span>2</span></div>
+                                            </div>
+                                            <div class="item-rating-progressbar d-flex align-items-center mb-2">
+                                                <div class="d-flex align-items-center ms-3">
+                                                    <i class="far fa-star"></i>
+                                                    <span class="me-1">1</span>
+                                                </div>
+                                                <div class="progress w-100 ms-3">
+                                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+                                                        role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: 50%"></div>
+                                                </div>
+                                                <div class=""> <span>1</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box-comments">
+                                    <div class="item-comment border-bottom pb-4 mb-4">
+                                        <div class="star_rating-item-comment d-flex mb-3">
+                                            <div class="star_rating ms-3 ">
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                            </div>
+                                            <h6 class="nameproduct-in-star-rating">
+                                                <span>برای</span>
+                                                <a href="#"> کوله پستی کت</a>
+                                            </h6>
+                                        </div>
+                                        <p class="mb-3">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                            طراحان
+                                            گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                            است، و
+                                            برای شرایط
+                                        </p>
+
+                                        <div class="porofile_customers-comment d-flex align-items-center">
+                                            <img src="images/castomer9787.jpg">
+                                            <div class="porofileName">
+                                                <h6>فاطمه حمزه عوفی</h6>
+                                                <span>3 روز پیش</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item-comment border-bottom pb-4 mb-4">
+                                        <div class="star_rating-item-comment d-flex mb-3">
+                                            <div class="star_rating ms-3 ">
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon"><i class="far fa-star"></i></span>
+                                            </div>
+                                            <h6 class="nameproduct-in-star-rating">
+                                                <span>برای</span>
+                                                <a href="#"> کفش اسپرت زنانه</a>
+                                            </h6>
+                                        </div>
+                                        <p class="mb-3">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                            طراحان
+                                            گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                            است، و
+                                            برای شرایط
+                                        </p>
+
+                                        <div class="porofile_customers-comment d-flex align-items-center">
+                                            <img src="images/castomer9787.jpg">
+                                            <div class="porofileName">
+                                                <h6>فاطمه حمزه عوفی</h6>
+                                                <span>3 روز پیش</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item-comment border-bottom pb-4 mb-4">
+                                        <div class="star_rating-item-comment d-flex mb-3">
+                                            <div class="star_rating ms-3 ">
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                            </div>
+                                            <h6 class="nameproduct-in-star-rating">
+                                                <span>برای</span>
+                                                <a href="#"> مانتو جلوباز</a>
+                                            </h6>
+                                        </div>
+                                        <p class="mb-3">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                            طراحان
+                                            گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                            است، و
+                                            برای شرایط
+                                        </p>
+
+                                        <div class="porofile_customers-comment d-flex align-items-center">
+                                            <img src="images/castomer9787.jpg">
+                                            <div class="porofileName">
+                                                <h6>فاطمه حمزه عوفی</h6>
+                                                <span>3 روز پیش</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item-comment border-bottom pb-4 mb-4">
+                                        <div class="star_rating-item-comment d-flex mb-3">
+                                            <div class="star_rating ms-3 ">
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon "><i class="far fa-star"></i></span>
+                                                <span class="star-icon "><i class="far fa-star"></i></span>
+                                            </div>
+                                            <h6 class="nameproduct-in-star-rating">
+                                                <span>برای</span>
+                                                <a href="#">کیف اداری</a>
+                                            </h6>
+                                        </div>
+                                        <p class="mb-3">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                            طراحان
+                                            گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                            است، و
+                                            برای شرایط
+                                        </p>
+
+                                        <div class="porofile_customers-comment d-flex align-items-center">
+                                            <img src="images/castomer9787.jpg">
+                                            <div class="porofileName">
+                                                <h6>فاطمه حمزه عوفی</h6>
+                                                <span>3 روز پیش</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="item-comment border-bottom pb-4 mb-4">
+                                        <div class="star_rating-item-comment d-flex mb-3">
+                                            <div class="star_rating ms-3 ">
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon star-icon-active"><i
+                                                        class="far fa-star"></i></span>
+                                                <span class="star-icon "><i class="far fa-star"></i></span>
+                                            </div>
+                                            <h6 class="nameproduct-in-star-rating">
+                                                <span>برای</span>
+                                                <a href="#"> کوله پستی کت</a>
+                                            </h6>
+                                        </div>
+                                        <p class="mb-3">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                                            طراحان
+                                            گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                            است، و
+                                            برای شرایط
+                                        </p>
+
+                                        <div class="porofile_customers-comment d-flex align-items-center">
+                                            <img src="images/castomer9787.jpg">
+                                            <div class="porofileName">
+                                                <h6>فاطمه حمزه عوفی</h6>
+                                                <span>3 روز پیش</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="area-btnOldComment-show-namberofComment d-xl-flex  justify-content-xl-between  text-center p-0">
+                                    <div
+                                        class="box-show-namberofComment  mb-4 mb-xl-0  d-flex justify-content-center align-items-center ">
+                                        <span>نمایش 5 از 15 دیدگاه</span>
+                                        <div class="progress w-100 me-3">
+                                            <div class="progress-bar  progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%;background-color:#766df4"></div>
+                                        </div>
+                                    </div>
+                                    <a class="btnOldComment" href="#">نمایش دیدگاههای قدیمی تر</a>
+                                </div>
+
+
+                            </div>
+                            <div class="tab-pane fade" id="content3" role="tabpanel"
+                                aria-labelledby="v-pills-messages-tab">
+                                <div class="header-tab-content-account  mb-4">
+                                    <h1 class="title-tabcontent-account">
+                                        نشانی ها
+                                    </h1>
+                                </div>
+                                <div class="profile-address-container">
+                                    <div class="profile-address-itemTop mb-3"> اهواز_ کوی مجاهد، کوچه هنر 4 پلاک 15
+                                    </div>
+                                    <div class="profile-address-content">
+                                        <ul>
+                                            <li>
+                                                <div class="profile-address-item profile-address-item-location mb-2"><i
+                                                        class="fal fa-map-marker-alt ms-2"></i>خوزستان، اهواز</div>
+                                            </li>
+                                            <li>
+                                                <div class="profile-address-item profile-address-item-postalCode mb-2">
+                                                    <i class="far fa-envelope ms-2"></i>5624225648</div>
+                                            </li>
+                                            </li>
+                                            <li>
+                                                <div class="profile-address-item profile-address-item-phone mb-2"><i
+                                                        class="fal fa-phone-alt ms-2"></i>09165252325</div>
+                                            </li>
+                                            </li>
+                                            <li>
+                                                <div class="profile-address-item profile-address-item-name mb-2"><i
+                                                        class="fal fa-user ms-2"></i>فاطمه حمزه عوفی</div>
+                                            </li>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="content4" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <div
+                                    class="header-tab-content-account d-sm-flex justify-content-between align-items-center mb-4">
+                                    <h1 class="title-tabcontent-account mb-3 mb-sm-0">
+                                        سفارش ها
+                                    </h1>
+                                    <div
+                                        class="box-select-sort d-flex align-items-center justify-content-start justify-content-sm-end">
+                                        <label class="lable-select-sort ms-2" for="FormCustomSelect">مرتب سازی براساس:
+                                        </label>
+                                        <select class="form-select custom-select"  id="FormCustomSelect" aria-label="Default select example">
+                                            <option selected="">همه</option>
+                                            <option value="1">در حال پردازش</option>
+                                            <option value="2">تحویل داده </option>
+                                            <option value="3">لغو شده ها</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="accordion area-Orders-account" id="accordionExample">
+                                    <div class="accordion-item card card-Orders-account mb-3">
+                                      <h2 class="accordion-header card-header" id="headingOne">
+                                        <button class="accordion-button header-content-orders  d-sm-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <div class="id-product-order item-header-orders">dkc-65454555</div>
+                                            <div class="date-order item-header-orders"><i
+                                                    class="fal fa-clock ms-1"></i>1399/10/15
+                                            </div>
+                                            <div class="stutus-order stutus-order-blue item-header-orders">درحال
+                                                پردازش</div>
+                                            <div class="price-product-order item-header-orders"> 150.000 تومان</div>
+                                            </button>
+                                        </h2>
+                                      <div id="collapseOne" class="accordion-collapse collapse show  collapse-content-orders" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body card-body">
+                                            <div
+                                                class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                                <div
+                                                    class="area-ditails_product-orders d-flex align-items-center flex-column flex-sm-row">
+                                                    <img src="images/shoes21.jpg" class="mb-3 mb-sm-0">
+                                                    <div class="ditails_product-orders me-3  text-center">
+                                                        <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                            روی</a>
+                                                        <div><span>سایز: </span>xl</div>
+                                                        <div><span>رنگ: </span>سفید</div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-row flex-sm-column justify-content-center align-items-center ">
+                                                    تعداد:
+                                                    <span>2</span></div>
+                                                <div
+                                                    class="d-flex  flex-row flex-sm-column justify-content-center align-items-center">
+                                                    جمع کل:
+                                                    <span>1500000</span>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                                <div
+                                                    class="area-ditails_product-orders d-flex align-items-center flex-column flex-sm-row">
+                                                    <img src="images/hedsetwireless.jpg" class="mb-3 mb-sm-0">
+                                                    <div class="ditails_product-orders me-3  text-center">
+                                                        <a href="#" class="nameproduct-orders mb-1">هدست بی سیم</a>
+                                                        <div><span>سایز: </span>xl</div>
+                                                        <div><span>رنگ: </span>سفید</div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                                                    تعداد:
+                                                    <span>2</span></div>
+                                                <div
+                                                    class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                                                    جمع کل:
+                                                    <span>1500000</span>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>جمع کل: </span>
+                                                    <span>152000 تومان</span>
+                                                </div>
+
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>حمل و نقل: </span>
+                                                    <span>15000 تومان</span>
+                                                </div>
+
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>مالیات: </span>
+                                                    <span>6000 تومان</span>
+                                                </div>
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>کل: </span>
+                                                    <span>173000 تومان</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item card card-Orders-account mb-3">
+                                      <h2 class="accordion-header card-header" id="headingTwo">
+                                        <button class="accordion-button header-content-orders  d-sm-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <div class="id-product-order item-header-orders">dkc-65454555</div>
+                                            <div class="date-order item-header-orders"><i
+                                                    class="fal fa-clock ms-1"></i>1399/7/19</div>
+                                            <div class="stutus-order stutus-order-success item-header-orders">تحویل
+                                                داده </div>
+                                            <div class="price-product-order item-header-orders"> 150.000 تومان</div>
+                                        </button>
+                                      </h2>
+                                      <div id="collapseTwo" class="accordion-collapse collapse  collapse-content-orders" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body card-body">
+                                            <div
+                                                class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                                <div
+                                                    class="area-ditails_product-orders d-flex align-items-center flex-column flex-sm-row">
+                                                    <img src="images/hedsetwireless.jpg" class="mb-3 mb-sm-0">
+                                                    <div class="ditails_product-orders me-3  text-center">
+                                                        <a href="#" class="nameproduct-orders mb-1">هدست بی سیم</a>
+                                                        <div><span>سایز: </span>xl</div>
+                                                        <div><span>رنگ: </span>سفید</div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                                                    تعداد:
+                                                    <span>2</span></div>
+                                                <div
+                                                    class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                                                    جمع کل:
+                                                    <span>1500000</span>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>جمع کل: </span>
+                                                    <span>152000 تومان</span>
+                                                </div>
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>حمل و نقل: </span>
+                                                    <span>15000 تومان</span>
+                                                </div>
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>مالیات: </span>
+                                                    <span>6000 تومان</span>
+                                                </div>
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>کل: </span>
+                                                    <span>173000 تومان</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item card card-Orders-account mb-3">
+                                      <h2 class="accordion-header card-header" id="headingThree">
+                                        <button class="accordion-button header-content-orders  d-sm-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <div class="id-product-order item-header-orders">dkc-65454555</div>
+                                            <div class="date-order item-header-orders"><i
+                                                    class="fal fa-clock ms-1"></i>1399/2/4</div>
+                                            <div class="stutus-order stutus-order-danger item-header-orders">لغو شده
+                                            </div>
+                                            <div class="price-product-order item-header-orders"> 150.000 تومان</div>
+                                        </button>
+                                      </h2>
+                                      <div id="collapseThree" class="accordion-collapse collapse  collapse-content-orders" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body card-body">
+                                            <div
+                                                class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                                <div
+                                                    class="area-ditails_product-orders d-flex align-items-center flex-column flex-sm-row">
+                                                    <img src="images/camera.jpg" class="mb-3 mb-sm-0">
+                                                    <div class="ditails_product-orders me-3  text-center">
+                                                        <a href="#" class="nameproduct-orders mb-1">دوربین
+                                                            امنیتی</a>
+                                                        <div><span>سایز: </span>xl</div>
+                                                        <div><span>رنگ: </span>سفید</div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                                                    تعداد:
+                                                    <span>2</span></div>
+                                                <div
+                                                    class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                                                    جمع کل:
+                                                    <span>1500000</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>جمع کل: </span>
+                                                    <span>152000 تومان</span>
+                                                </div>
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>حمل و نقل: </span>
+                                                    <span>15000 تومان</span>
+                                                </div>
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>مالیات: </span>
+                                                    <span>6000 تومان</span>
+                                                </div>
+                                                <div
+                                                    class="details-bottom-content-orders details-bottom-content ms-3">
+                                                    <span>کل: </span>
+                                                    <span>173000 تومان</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item card card-Orders-account mb-3">
+                                        <h2 class="accordion-header card-header" id="headingfure">
+                                          <button class="accordion-button header-content-orders  d-sm-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefure" aria-expanded="false" aria-controls="collapsefure">
+                                            <div class="id-product-order item-header-orders">dkc-65454555</div>
+                                            <div class="date-order item-header-orders"><i
+                                                    class="fal fa-clock ms-1"></i>1399/10/20
+                                            </div>
+                                            <div class="stutus-order stutus-order-danger item-header-orders">لغو شده
+                                            </div>
+                                            <div class="price-product-order item-header-orders"> 150.000 تومان</div>
+                                          </button>
+                                        </h2>
+                                        <div id="collapsefure" class="accordion-collapse collapse  collapse-content-orders" aria-labelledby="headingfure" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body card-body">
+                                                <div
+                                                    class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                                    <div
+                                                        class="area-ditails_product-orders d-flex align-items-center flex-column flex-sm-row">
+                                                        <img src="images/shoes21.jpg" class="mb-3 mb-sm-0">
+                                                        <div class="ditails_product-orders me-3  text-center">
+                                                            <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                                روی</a>
+                                                            <div><span>سایز: </span>xl</div>
+                                                            <div><span>رنگ: </span>سفید</div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                                                        تعداد:
+                                                        <span>2</span></div>
+                                                    <div
+                                                        class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                                                        جمع کل:
+                                                        <span>1500000</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+
+                                                    <div
+                                                        class="details-bottom-content-orders details-bottom-content ms-3">
+                                                        <span>جمع کل: </span>
+                                                        <span>152000 تومان</span>
+                                                    </div>
+                                                    <div
+                                                        class="details-bottom-content-orders details-bottom-content ms-3">
+                                                        <span>حمل و نقل: </span>
+                                                        <span>15000 تومان</span>
+                                                    </div>
+                                                    <div
+                                                        class="details-bottom-content-orders details-bottom-content ms-3">
+                                                        <span>مالیات: </span>
+                                                        <span>6000 تومان</span>
+                                                    </div>
+                                                    <div
+                                                        class="details-bottom-content-orders details-bottom-content ms-3">
+                                                        <span>کل: </span>
+                                                        <span>173000 تومان</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="accordion-item card card-Orders-account mb-3">
+                                        <h2 class="accordion-header card-header" id="headingfive">
+                                          <button class="accordion-button header-content-orders  d-sm-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                            <div class="id-product-order item-header-orders">dkc-65454555</div>
+                                            <div class="date-order item-header-orders"><i
+                                                    class="fal fa-clock ms-1"></i>1399/3/10</div>
+                                            <div class="stutus-order stutus-order-success item-header-orders">تحویل
+                                                داده </div>
+                                            <div class="price-product-order item-header-orders"> 150.000 تومان</div>
+                                          </button>
+                                        </h2>
+                                        <div id="collapsefive" class="accordion-collapse collapse  collapse-content-orders" aria-labelledby="headingfive" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body card-body">
+                                                <div
+                                                    class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                                    <div
+                                                        class="area-ditails_product-orders d-flex align-items-center flex-column flex-sm-row">
+                                                        <img src="images/hedsetwireless.jpg" class="mb-3 mb-sm-0">
+                                                        <div class="ditails_product-orders me-3  text-center">
+                                                            <a href="#" class="nameproduct-orders mb-1">هدست بی سیم</a>
+                                                            <div><span>سایز: </span>xl</div>
+                                                            <div><span>رنگ: </span>سفید</div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                                                        تعداد:
+                                                        <span>2</span></div>
+                                                    <div
+                                                        class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                                                        جمع کل:
+                                                        <span>1500000</span>
+                                                    </div>
+
+                                                </div>
+
+                                                <div
+                                                    class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+                                                    <div
+                                                        class="details-bottom-content-orders details-bottom-content ms-3">
+                                                        <span>جمع کل: </span>
+                                                        <span>152000 تومان</span>
+                                                    </div>
+                                                    <div
+                                                        class="details-bottom-content-orders details-bottom-content ms-3">
+                                                        <span>حمل و نقل: </span>
+                                                        <span>15000 تومان</span>
+                                                    </div>
+                                                    <div
+                                                        class="details-bottom-content-orders details-bottom-content ms-3">
+                                                        <span>مالیات: </span>
+                                                        <span>6000 تومان</span>
+                                                    </div>
+                                                    <div
+                                                        class="details-bottom-content-orders details-bottom-content ms-3">
+                                                        <span>کل: </span>
+                                                        <span>173000 تومان</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                <div
+                                    class="area-btnOldOrders-showNamberOofOrders d-xl-flex  justify-content-xl-between  text-center pt-3">
+                                    <div
+                                        class="box-showNamberofOrders  mb-4 mb-xl-0  d-flex justify-content-center align-items-center ">
+                                        <span>نمایش 5 از 8 سفارش</span>
+                                        <div class="progress w-100 me-3">
+                                            <div class="progress-bar  progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%;background-color:#766df4"></div>
+                                        </div>
+                                    </div>
+                                    <a class="btn-OldOrders " href="#">نمایش سفارش های بیشتر</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="content5" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <div
+                                    class="header-tab-content-account d-flex justify-content-between align-items-center mb-4">
+
+                                    <h1 class="title-tabcontent-account">
+                                        اطلاعات حساب
+
+                                    </h1>
+                                    <form>
+                                        <button class="btn btn-remove-account" type="button"><i
+                                                class="fas fa-trash-alt ms-2"></i>حذف اکانت</button>
+                                    </form>
+                                </div>
+                                <div
+                                    class="area-setting-avatar d-flex flex-column flex-sm-row  justify-content-center align-items-center p-4 mb-4">
+                                    <img class="img-avatar-user mb-3 mb-sm-0" src="images/img11.jpg">
+
+                                    <div class="me-3 text-center text-sm-right">
+                                        <button type="button" class="btn-chang-avatar">ویرایش آواتار<i
+                                                class="fal fa-repeat-alt me-2"></i></button>
+
+                                        <div class="description-avatar-user mt-2">
+                                            آپلود تصویر png, jpg ابعاد 300*300
+                                        </div>
+                                    </div>
+                                </div>
+                                <form>
+                                    <div class="row">
+                                        <div class="form-group col-md-6 mb-4">
+                                            <label for="inputname">نام</label>
+                                            <input type="text" class="form-control" id="inputname" placeholder="فاطمه">
+                                        </div>
+
+                                        <div class="form-group col-md-6 mb-4">
+                                            <label for="inputname">نام خانوادگی</label>
+                                            <input type="text" class="form-control" id="inputname" placeholder="عوفی">
+                                        </div>
+                                        <div class="form-group col-md-6 mb-4">
+                                            <label for="inputbirth">تاریخ تولد</label>
+                                            <input type="date" class="form-control" id="inputbirth"
+                                                placeholder="1368/7/2">
+                                        </div>
+
+                                        <div class="form-group col-md-6 mb-4">
+                                            <label for="inputState">جنسیت</label>
+
+                                            <select class="form-select custom-select" id="inputState"  aria-label="Default select example">
+                                                <option selected>مرد</option>
+                                                <option>زن</option>
+                                              </select>
+                                        </div>
+                                        <div class="form-group col-md-6 mb-4">
+                                            <label for="inputEmail4">آدرس ایمیل</label>
+                                            <input type="email" class="form-control" id="inputEmail4"
+                                                placeholder="example@yahoo.com">
+                                        </div>
+                                        <div class="form-group col-md-6 mb-4">
+                                            <label for="inpustate">استان</label>
+                                            <input type="text" class="form-control" id="inpustate"
+                                                placeholder="خوزستان">
+                                        </div>
+
+                                        <div class="form-group col-md-6 mb-4">
+                                            <label for="inputsity">شهر</label>
+                                            <input type="text" class="form-control" id="inputsity" placeholder="اهواز">
+                                        </div>
+
+                                        <div class="form-group col-md-6 mb-4">
+                                            <label for="inputurl">آدرس</label>
+                                            <input type="text" class="form-control" id="inputurl"
+                                                placeholder="اهواز-کیان پارس">
+                                        </div>
+                                        <div class="form-group col-md-6 mb-4">
+                                            <label for="inputcodepost">کد پستی</label>
+                                            <input type="text" class="form-control" id="inputcodepost"
+                                                placeholder="2541236541">
+                                        </div>
+                                        <div class="form-group col-md-6 mb-4">
+                                            <label for="inputcodemely">کدملی</label>
+                                            <input type="text" class="form-control" id="inputcodemely"
+                                                placeholder="1740265123">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-md-between align-items-center">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                ایمیل من را به کاربران نمایش بده
+                                            </label>
+                                        </div>
+                                        <div class="area-btn-save">
+                                            <button type="submit" class="btn btn-5"> ذخیره تغییرات<i
+                                                    class="far fa-sd-card me-2"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="content6" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <div class="header-tab-content-account  mb-4">
+                                    <h1 class="title-tabcontent-account">
+                                        تغییر رمز عبور
+                                    </h1>
+                                </div>
+                                <form>
+                                    <div class="pb-4 mb-4">
+                                        <div class="form-group">
+                                            <label for="input-passwordNew">پسورد جدید</label>
+                                            <input type="password" class="form-control inputpassword"
+                                                id="input-passwordNew">
+                                        </div>
+                                        <div class="form-check showPasswork-checkbox my-3 my-sm-0">
+                                            <input type="checkbox" class="form-check-input ms-1"
+                                                id="checkbox-passwordNew" onclick="showPassword()">
+                                            <label class="form-check-label" for="checkbox-passwordNew">نمایش
+                                                رمز عبور</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="form-group">
+                                            <label for="input-password-repetition">تکرار پسورد جدید</label>
+                                            <input type="password" class="form-control inputpassword-repetition"
+                                                id="input-password-repetition">
+
+                                        </div>
+                                        <div class="form-check showPasswork-checkbox my-3 my-sm-0">
+                                            <input type="checkbox" class="form-check-input ms-1"
+                                                id="checkbox-password-repetition" onclick="showPassword2()">
+                                            <label class="form-check-label" for="checkbox-password-repetition">نمایش
+                                                رمز عبور</label>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end mt-4">
+
+                                        <div class="area-btn-save">
+                                            <button type="submit" class="btn btn-5"> ذخیره تغییرات<i
+                                                    class="far fa-sd-card me-2"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="content7" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <div class="header-tab-content-account  mb-4">
+                                    <h1 class="title-tabcontent-account">
+                                        تغییر شماره تلفن
+                                    </h1>
+                                </div>
+                                <form>
+                                    <div class="mb-3 text-info">یک کد برای تایید این شماره برای شما ارسال خواهد شد</div>
+                                    <div class="form-group  mb-4">
+                                        <label for="input-change-numberphone">شماره تلفن خود را وارد کنید</label>
+                                        <input type="text" class="form-control" id="input-change-numberphone">
+                                    </div>
+                                    <div class="d-flex justify-content-end mt-4">
+                                        <div class="area-btn-save">
+                                            <button type="submit" class="btn btn-5"> ذخیره تغییرات<i
+                                                    class="far fa-sd-card me-2"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="content8" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <div class="header-tab-content-account  mb-4">
+                                    <h1 class="title-tabcontent-account">
+                                        تغییر شماره حساب
+                                    </h1>
+                                </div>
+                                <div class="notification-changeNumberaccount mb-4">
+                                    <span class="text-danger bold">توجه: </span>
+                                    برای دریافت شماره شبای حساب خود می توانید به سایت بانک خود مراجعه کرده و نسبت یه
+                                    دریافت آنلاین شناسه شبای حساب خود اقدام نمایید.
+                                </div>
+                                <div class="text-info  notification-changeNumberaccount mb-4">
+
+                                    <span class="text-danger bold">توجه: </span>
+                                    مسئولیت اشتباه بودن اطلاعات بر عهده خود شما میباشد، و مبلغ واریزی قابل بازگشت
+                                    نمیباشد.
+                                </div>
+                                <form>
+                                    <div class="form-group mb-4">
+                                        <label for="input-account-ownerName">نام صحاب حساب</label>
+                                        <input type="text" class="form-control" id="input-account-ownerName"
+                                            placeholder="علی حمزه عوفی">
+                                    </div>
+                                    <div class="form-group  mb-4">
+                                        <label for="input-nameBank">نام بانک</label>
+                                        <input type="text" class="form-control" id="input-nameBank"
+                                            placeholder="بانک رفاه">
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label for="input-numberAccount">شماره حساب</label>
+                                        <input type="text" class="form-control" id="input-numberAccount"
+                                            placeholder="21523">
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label for="input-number-card">شماره کارت</label>
+                                        <input type="text" class="form-control" id="input-number-card"
+                                            placeholder="256454698652352">
+                                    </div>
+
+                                    <div class="form-group  mb-4">
+                                        <label for="input-numberShaba">شماره شبا</label>
+                                        <input type="text" class="form-control" id="input-numberShaba"
+                                            placeholder="26546512634541236541">
+                                    </div>
+
+                                    <div class="d-flex justify-content-end mt-4">
+
+                                        <div class="area-btn-save">
+                                            <button type="submit" class="btn btn-5"> ذخیره تغییرات<i
+                                                    class="far fa-sd-card me-2"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="content9" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <div class="header-tab-content-account  mb-4">
+                                    <h1 class="title-tabcontent-account">
+                                        اعلان ها
+                                    </h1>
+                                </div>
+                                <div class="description-notification-account">
+                                    برای فعال و غیرفعال کردن همه اعلان ها از کلید اصلی در منوی اکانت استفاده کنید
+                                </div>
+                                <div class="area-content-options-notification  ">
+                                    <form>
+                                        <div class="area-options-notification border-bottom py-4">
+                                            <input type="checkbox" class="switch-checkbox ms-1"
+                                                id="input-switch-checkbox" checked>
+                                            <label for="input-switch-checkbox">اعلان های فروخته شده محصول</label>
+                                            <div class="text-options-notification mt-2">هنگامی که شخصی یکی از محصولات من
+                                                را
+                                                خریداری کرد، ایمیل ارسال کنید
+                                            </div>
+                                        </div>
+
+                                        <div class="area-options-notification border-bottom py-4">
+                                            <input type="checkbox" class="switch-checkbox ms-1"
+                                                id="input-switch-checkbox" checked>
+                                            <label for="input-switch-checkbox">اعلان های بروز رسانی محصول</label>
+                                            <div class="text-options-notification mt-2">با به روزرسانی محصول خریداری
+                                                شده، ایمیل
+                                                ارسال کنید
+                                            </div>
+                                        </div>
+                                        <div class="area-options-notification border-bottom py-4">
+                                            <input type="checkbox" class="switch-checkbox ms-1"
+                                                id="input-switch-checkbox" checked>
+                                            <label for="input-switch-checkbox">اعلان های کامنت محصول</label>
+                                            <div class="text-options-notification mt-2">هنگامی که شخصی در مورد یکی از
+                                                محصولات
+                                                من نظر
+                                                می دهد ، ایمیل ارسال کنید
+                                            </div>
+                                        </div>
+                                        <div class="area-options-notification border-bottom py-4">
+                                            <input type="checkbox" class="switch-checkbox ms-1"
+                                                id="input-switch-checkbox" checked>
+                                            <label for="input-switch-checkbox">اعلان بررسی محصول</label>
+                                            <div class="text-options-notification mt-2">وقتی کسی به محصولات امتیاز داد
+                                                یک ایمیل
+                                                ارسال کنید
+                                            </div>
+                                        </div>
+                                        <div class="area-options-notification border-bottom py-4">
+                                            <input type="checkbox" class="switch-checkbox ms-1"
+                                                id="input-switch-checkbox" checked>
+                                            <label for="input-switch-checkbox">اعلان های فروخته شده محصول</label>
+                                            <div class="text-options-notification mt-2">هنگامی که شخصی یکی از محصولات من
+                                                را
+                                                خریداری کرد، ایمیل ارسال کنید
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mt-4">
+                                            <div class="area-btn-save">
+                                                <button type="submit" class="btn btn-5"> ذخیره تغییرات<i
+                                                        class="far fa-sd-card me-2"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,693 @@
+{% extends 'parent/base.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+    <div class="content shop sidebar left-sidebar">
+        <section class="area-sidebarContent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-9 py-5 ps-lg-5">
+                        <div class="area-content-bySidebar ">
+                            <nav aria-label="breadcrumb" class="mb-4 mb-lg-3">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                                    <li class="breadcrumb-item"><a href="#">فروشگاه</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">شبکه ای نوار کناری سمت چپ</li>
+                                </ol>
+                            </nav>
+                            <div class="box-selection-shop py-3 mb-3 d-none d-lg-block">
+                                <label class="ml-3"> انتخاب شما: </label>
+                                <a href="#">لباس</a>
+                                <a href="#">پیراهن و تاپ</a>
+                                <a href="#">نام برند</a>
+                                <a href="#">اندازه</a>
+                            </div>
+                            <div
+                                class="area-select-sort-NumberProductPerPage d-flex justify-content-between align-items-center mb-3">
+                                <div class="box-select-sort d-flex align-items-center justify-content-end mb-4">
+                                    <select class="form-select custom-select ms-3"  id="select-sort" aria-label="Default select example">
+                                        <option selected>براساس محبوبیت</option>
+                                        <option value="1">براساس جدید بودن</option>
+                                        <option value="2">براساس قیمت: کم به زیاد</option>
+                                        <option value="3">براساس قیمت: زیاد به کم</option>
+                                      </select>
+                                    <label class="lable-select-sort d-none d-sm-block" for="select-sort">از 135 محصول
+                                    </label>
+                                </div>
+                                <div
+                                    class="box-select-NumberProduct-the-page d-none  d-md-flex align-items-center justify-content-end mb-4">
+                                    <label class="lable-select-NumberProduct-the-page"
+                                        for="select-NumberProduct-the-page">نمایش </label>
+                                        <select class="form-select custom-select mx-3"  id="select-NumberProduct-the-page" aria-label="Default select example">
+                                            <option selected>12</option>
+                                            <option value="1">24</option>
+                                            <option value="2">36</option>
+                                            <option value="3">48</option>
+                                          </select>
+                                    <span>محصول در صفحه</span>
+                                </div>
+                            </div>
+                            <div class="area-all-product mb-4">
+                                <div class="row">
+                                    <div
+                                        class="col-12   col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/shoes541.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>کفش اسپرت </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">150000تومان</del><span> 120000
+                                                        تومان</span></div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon "><i class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/kolah757.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>کلاه آفتاب گیر </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">15000تومان</del><span> 12000 تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/hansfari78.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>هدفون بی سیم </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-s">250000تومان</del><span> 120000
+                                                        تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon "><i class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/pirhan587.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>پیراهن مردانه</h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-s">120000تومان</del><span> 150000
+                                                        تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/spiker75.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>اسپیکر با کنترل صدا </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-s">150000تومان</del><span> 120000
+                                                        تومان</span></div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/kif75.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>کوله پشتی </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-s">15000تومان</del><span> 12000 تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon "><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/kolah785.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>کلاه دخترانه </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">250000تومان</del><span> 120000
+                                                        تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon "><i class="far fa-star"></i></span>
+                                                    <span class="star-icon "><i class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/camera7857.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>دوربین</h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">12000000تومان</del><span> 1500000
+                                                        تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6  col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/shoes541.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>کفش اسپرت </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">150000تومان</del><span> 120000
+                                                        تومان</span></div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon "><i class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/kolah757.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>کلاه آفتاب گیر </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">15000تومان</del><span> 12000 تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/hansfari78.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>هدفون بی سیم </h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">250000تومان</del><span> 120000
+                                                        تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon "><i class="far fa-star"></i></span>
+                                                    <span class="star-icon"><i class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12  col-sm-6 col-md-4 col-lg-6 col-xl-4 mb_col_productNew d-flex justify-content-center">
+                                        <div class="product_cart">
+                                            <a href="#" class="card_product_img"><img src="images/pirhan587.jpg" 
+                                                    class="img-fluid" /></a>
+                                            <div class="body_card_product text-right">
+                                                <a href="#">
+                                                    <h3>پیراهن مردانه</h3>
+                                                </a>
+                                                <div class="price_card_product"> <del
+                                                        class="ms-1">120000تومان</del><span> 150000
+                                                        تومان</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card_footer_product d-flex justify-content-between align-items-center">
+                                                <div class="star_rating">
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                    <span class="star-icon star-icon-active"><i
+                                                            class="far fa-star"></i></span>
+                                                </div>
+                                                <div class="area_icon_cardFooter d-flex align-items-center">
+                                                    <a href="#" class="border-left"><i
+                                                            class="fal fa-cart-plus"></i><span class="tooltip-site"> سبد
+                                                            خرید </span></a>
+                                                    <a href="#"><i class="fal fa-heart"></i><span class="tooltip-site">
+                                                            علاقه مندی ها</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="area-pageination-shop  d-flex  flex-column flex-md-row justify-content-between align-items-center mb-4">
+                                <ul class="pagination pagination-lg d-flex justify-content-center order-2 order-md-1">
+                                    <li class="page-item ml-2"><a class="page-link" href="#" aria-label="Previous"><i
+                                                class="fas fa-chevron-right"></i></a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link " href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item ">...</li>
+                                    <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                    <li class="page-item mr-2"><a class="page-link" href="#" aria-label="Next"><i
+                                                class="fas fa-chevron-left"></i></a></li>
+                                </ul>
+                                <div
+                                    class="box-select-NumberProduct-the-page d-flex align-items-center justify-content-center justify-content-md-end mb-4 mb-md-0 pb-2 pb-md-0  order-1 order-md-2">
+                                    <label class="lable-select-NumberProduct-the-page"
+                                        for="select-NumberProduct-the-page">نمایش </label>
+                                        <select class="form-select custom-select mx-3"  id="select-NumberProduct-the-page" aria-label="Default select example">
+                                            <option selected>12</option>
+                                            <option value="1">24</option>
+                                            <option value="2">36</option>
+                                            <option value="3">48</option>
+                                          </select>
+                                    <span>محصول در صفحه</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block col-3 pt-5 ps-lg-3 pe-lg-0 ps-xl-0 pe-xl-4">
+                        <div class="area-sidebar">
+                            <div class="widget-sidebar mb-5" id="accordian">
+                                <header>
+                                    <h3 class="title-widget-sidebar mb-3">دسته بندی</h3>
+                                </header>
+                                <section>
+                                    <ul class="menu-multi-level menu-categorySidebar">
+                                        <li class="menu-item-has-children"><a href="#">لباس و پوشاک <span
+                                                    class="badge-sidebar-shop">55</span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">نمایش همه </a>
+                                                </li>
+                                                <li><a href="#"> تی شرت و پلوشرت</a>
+                                                </li>
+                                                <li><a href="#">پیراهن </a>
+                                                </li>
+                                                <li><a href="#">شلوار </a>
+                                                </li>
+                                                <li><a href="#">مانتو </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="#">کفش ها <span
+                                                    class="badge-sidebar-shop">125</span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">نمایش همه </a>
+                                                </li>
+                                                <li><a href="#">کفش رسمی</a>
+                                                </li>
+                                                <li><a href="#">کفش تخت </a>
+                                                </li>
+                                                <li><a href="#">کفش ورزشی </a>
+                                                </li>
+                                                <li><a href="#">کفش رسمی </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="#">وسایل الکترونیکی <span
+                                                    class="badge-sidebar-shop">105</span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">نمایش همه </a>
+                                                </li>
+                                                <li><a href="#"> کامپیوتر و لپتاپ </a>
+                                                </li>
+                                                <li><a href="#"> گوشی موبایل </a>
+                                                </li>
+                                                <li><a href="#"> هدفون و هندفری</a>
+                                                </li>
+                                                <li><a href="#"> یخچال</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="#">اکسسوری <span
+                                                    class="badge-sidebar-shop">95</span> </a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">نمایش همه </a>
+                                                </li>
+                                                <li><a href="#">ساعت </a>
+                                                </li>
+                                                <li><a href="#">کیف </a>
+                                                </li>
+                                                <li><a href="#">کمربند </a>
+                                                </li>
+                                                <li><a href="#">زیور آلات </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="#">کیف ها <span
+                                            class="badge-sidebar-shop">125</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">نمایش همه </a>
+                                        </li>
+                                        <li><a href="#">کیف مجلسی</a>
+                                        </li>
+                                        <li><a href="#">کیف اداری </a>
+                                        </li>
+                                        <li><a href="#">کیف رو دوشی </a>
+                                        </li>
+                                        <li><a href="#">کیف دستی </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="widget-sidebar mb-5">
+                                <header>
+                                    <h3 class="title-widget-sidebar mb-4">قیمت</h3>
+                                </header>
+                                <section>
+                                    <div class="range-slider mb-3 px-3">
+                                        <input type="text" class="js-range-slider" value="" />
+                                    </div>
+                                    <div class="extra-controls form-inline">
+                                        <div class="form-group w-100 d-flex px-3 justify-content-center">
+                                            <input type="text" class="js-input-from form-control ms-lg-3" value="0" />
+                                            <input type="text" class="js-input-to form-control  " value="0" />
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="widget-sidebar mb-5">
+                                <header>
+                                    <h3 class="title-widget-sidebar mb-4">برند</h3>
+                                </header>
+                                <section>
+                                    <form action="" method="">
+                                        <div class="form-check d-flex">
+                                            <input class="form-check-input" type="checkbox" id="input-brand1">
+                                            <label for="input-brand1" class="form-check-label">Adidas</label>
+                                            <span class="badge-sidebar-shop">20</span>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="checkbox" id="input-brand2">
+                                            <label for="input-brand2" class="form-check-label">Bilabong</label>
+                                            <span class="badge-sidebar-shop">20</span>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="checkbox" id="input-brand3">
+                                            <label for="input-brand3" class="form-check-label">Calvin Klein</label>
+                                            <span class="badge-sidebar-shop">20</span>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="checkbox" id="input-brand4">
+                                            <label for="input-brand4" class="form-check-label">Electrolux</label>
+                                            <span class="badge-sidebar-shop">20</span>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="checkbox" id="input-brand5">
+                                            <label for="input-brand5" class="form-check-label">Motorolla</label>
+                                            <span class="badge-sidebar-shop">20</span>
+                                        </div>
+                                    </form>
+                                </section>
+                            </div>
+                            <div class="widget-sidebar mb-5">
+                                <header>
+                                    <h3 class="title-widget-sidebar mb-4">سایز</h3>
+                                </header>
+                                <section>
+                                    <form action="" method="">
+                                        <div class="form-check d-flex">
+                                            <input class="form-check-input" type="checkbox" id="input-size1">
+                                            <label for="input-size1" class="form-check-label">S</label>
+                                            <span class="badge-sidebar-shop">20</span>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="checkbox" id="input-size2">
+                                            <label for="input-size2" class="form-check-label">M</label>
+                                            <span class="badge-sidebar-shop">20</span>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="checkbox" id="input-size3">
+                                            <label for="input-size3" class="form-check-label">L</label>
+                                            <span class="badge-sidebar-shop">20</span>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="checkbox" id="input-size5">
+                                            <label for="input-size5" class="form-check-label">XL</label>
+                                            <span class="badge-sidebar-shop">20</span>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="checkbox" id="input-size6">
+                                            <label for="input-size6" class="form-check-label">XXL</label>
+                                            <span class="badge-sidebar-shop">20</span>
+                                        </div>
+                                    </form>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
