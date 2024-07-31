@@ -9,8 +9,7 @@ class SiteDetailModel(models.Model):
     email = models.EmailField()
     address = models.TextField()
     empty_cart_image = models.ImageField(upload_to='site_detail/image')
-    footer_title = models.CharField(max_length=1000)
-    footer_text = models.TextField()
+    work_time = models.TextField()
     copy_right = models.TextField()
     enamad_image = models.ImageField(upload_to='site_detail/image', null=True, blank=True)
     enamad_url = models.URLField(null=True, blank=True)
@@ -28,6 +27,7 @@ class SiteDetailModel(models.Model):
     telegram = models.URLField(blank=True, null=True)
     twitter = models.URLField(blank=True, null=True)
     linkedin = models.URLField(blank=True, null=True)
+    fax = models.CharField(max_length=11, blank=True, null=True)
 
 
 class AdvertisingBannerModel(models.Model):

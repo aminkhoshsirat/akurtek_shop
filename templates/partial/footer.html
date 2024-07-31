@@ -2,49 +2,31 @@
     <div class="area_footer_top">
         <div class="container">
             <div class="row">
-                <div class=" col-sm-6 col-lg-4">
-                    <div class="widget_footer">
-                        <div class="title_widget_footer">
-                            دسته بندی محصولات
-                        </div>
-                        <div class="contenet_widget_footer">
-                            <ul>
-                                <li><a href="#">بهداشتی آرایشی</a></li>
-                                <li><a href="#">کفش</a></li>
-                                <li><a href="#">لباس</a></li>
-                                <li><a href="#">دیجیتال</a></li>
-                                <li><a href="#">بهداشتی آرایشی</a></li>
-                                <li><a href="#">کفش</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-sm-6 col-lg-4  mt-4 mt-sm-0">
                     <div class="widget_footer">
                         <div class="title_widget_footer">تماس با ما</div>
                         <div class="contenet_widget_footer">
                             <ul>
                                 <li>
-                                    <span> آدرس: آدرس: ۴۴۵ کوه عدن جاده، کوه بهشت، اوکلند.</span>
+                                    <span>{{ site_detail.address }}</span>
                                 </li>
                                 <li>
-                                    <span> شماره تماس: 2135642512</span>
+                                    <span> شماره تماس: {{ site_detail.phone }}</span>
                                 </li>
                                 <li>
-                                    <span> ایمیل: digistore@exmple.com</span>
+                                    <span> ایمیل: {{ site_detail.email }}</span>
                                 </li>
                                 <li>
-                                    <span> فکس: 2564521544</span>
+                                    <span> فکس: {{ site_detail.fax }}</span>
                                 </li>
                                 <li>
-                                    <span> زمان کاری: شنبه تا پنچ شنبه ساعت ۸ صبح تا ۱۲ ظهر</span>
+                                    <span>{{ site_detail.work_time }}</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div
-                        class="col-sm-12 col-lg-4 d-sm-flex d-md-flex flex-lg-column flex-row align-items-md-center align-items-lg-start">
+                <div class="col-sm-12 col-lg-4 d-sm-flex d-md-flex flex-lg-column flex-row align-items-md-center align-items-lg-start">
                     <div class="widget_footer widget_footer_news pl-sm-3 pl-md-3 mt-4   mt-md-3 mt-lg-0 w-100">
                         <div class="title_widget_footer">عضویت در خبرنامه</div>
                         <div class="contenet_widget_footer">
@@ -57,30 +39,6 @@
                                            placeholder="ایمیل شما">
                                 </div>
                             </form>
-                        </div>
-                    </div>
-                    <div
-                            class="widget_footer widget_footer_downloadApp  mt-4  mt-md-4  px-sm-3 px-md-3 px-lg-0 w-100">
-                        <div class="title_widget_footer">دانلود برنامه</div>
-                        <div class="contenet_widget_footer">
-                            <div
-                                    class="download_app_footer d-flex   flex-row  align-items-xl-center flex-sm-column flex-md-row flex-lg-column   flex-xl-row">
-                                <a href="#" class="app_store  d-flex align-items-center justify-content-center ">
-                                    <div class="text_download_app">
-                                        <span>دانلود در </span>
-                                        <span>برنامه استور</span>
-                                    </div>
-                                    <img src="images/apple.svg"/>
-                                </a>
-                                <a href="#"
-                                   class="app_googlePlay d-flex align-items-center justify-content-center  mt-0 mt-sm-2  mt-md-0 mt-lg-3 mt-xl-0  me-3 me-sm-0 me-md-3 me-lg-0 me-xl-3 ">
-                                    <div class="text_download_app">
-                                        <span>دانلود در </span>
-                                        <span>گوگل پلی </span>
-                                    </div>
-                                    <img src="images/googlePlay.svg"/>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -139,7 +97,7 @@
             <div class="row pt-4 pb-4 pb-lg-5 align-items-center">
                 <div class=" col-12 col-lg-8 col-xl-9">
                     <div class="area_menu_footer d-flex  align-items-md-center flex-column flex-md-row ">
-                        <img src="images/logo.png" class="img-logoFooter ms-2 mb-2 d-none d-md-block"/>
+                        <img src="{{ site_detail.logo.url }}" class="img-logoFooter ms-2 mb-2 d-none d-md-block"/>
                         <div class="menu_footer mt-2 mt-md-0">
                             <ul>
                                 <li><a href="#">قوانین سایت</a></li>
@@ -153,15 +111,22 @@
                 </div>
                 <div class="col-12 col-lg-4 col-xl-3 mt-4 mt-lg-0">
                     <div class="area-socialIcon d-flex justify-content-start justify-content-lg-end">
-                        <a href="http://www.facebook.com" class="icon facebook"><span
-                                class="tooltip-site">Facebook</span></a>
-                        <a href="http://www.github.com" class="icon instegram"><span
-                                class="tooltip-site">instegram</span></a>
-                        <a href="http://www.dribble.com" class="icon linkedin"><span
-                                class="tooltip-site">linkedin</span></a>
-                        <a href="http://www.twitter.com" class="icon twitter"><span
-                                class="tooltip-site">Twitter</span></a>
-
+                        {% if site_detail.facebook %}
+                            <a href="{{ site_detail.facebook }}" class="icon facebook"><span
+                                    class="tooltip-site">Facebook</span></a>
+                        {% endif %}
+                        {% if site_detail.instagram %}
+                            <a href="{{ site_detail.instagram }}" class="icon instegram"><span
+                                    class="tooltip-site">instegram</span></a>
+                        {% endif %}
+                        {% if site_detail.linkedin %}
+                            <a href="{{ site_detail.linkedin }}" class="icon linkedin"><span
+                                    class="tooltip-site">linkedin</span></a>
+                        {% endif %}
+                        {% if site_detail.twitter %}
+                            <a href="{{ site_detail.twitter }}" class="icon twitter"><span
+                                    class="tooltip-site">Twitter</span></a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -173,7 +138,7 @@
                 </div>
                 <div class="col-12 col-lg-4 order-1 order-lg-2">
                     <div class="area_cartimg_footer float-end float-lg-start">
-                        <img src="images/images13.png" style="width: 12rem;"/>
+                        <img src="{{ site_detail.enamad_image }}" style="width: 12rem;"/>
                     </div>
                 </div>
             </div>
