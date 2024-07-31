@@ -40,12 +40,16 @@ INSTALLED_APPS = [
 
     'django_jalali',
     'django_render_partial',
+    'ckeditor',
 
     'apps.user.apps.UserConfig',
     'apps.product.apps.ProductConfig',
     'apps.panel.apps.PanelConfig',
     'apps.payment.apps.PaymentConfig',
+    'apps.blog.apps.BlogConfig',
 ]
+
+AUTH_USER_MODEL = 'user.UserModel'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

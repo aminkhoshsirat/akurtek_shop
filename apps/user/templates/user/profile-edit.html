@@ -1,0 +1,63 @@
+<div
+        class="header-tab-content-account d-flex justify-content-between align-items-center mb-4">
+
+    <h1 class="title-tabcontent-account">
+        اطلاعات حساب
+
+    </h1>
+</div>
+<form method="post">
+    <div
+            class="area-setting-avatar d-flex flex-column flex-sm-row  justify-content-center align-items-center p-4 mb-4">
+        <img class="img-avatar-user mb-3 mb-sm-0" src="images/img11.jpg">
+
+        <div class="me-3 text-center text-sm-right">
+            <button type="button" class="btn-chang-avatar">ویرایش آواتار<i
+                    class="fal fa-repeat-alt me-2"></i></button>
+
+            <div class="description-avatar-user mt-2">
+                <input type="file" name="profile_image" placeholder="آپلود تصویر png, jpg ابعاد 300*300">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6 mb-4">
+            <label for="inputname">نام نام خانوادگی</label>
+            <input type="text" name="fullname" class="form-control" id="inputname" placeholder="{{ user.fullname }}">
+        </div>
+
+        <div class="form-group col-md-6 mb-4">
+            <label for="inputbirth">تاریخ تولد</label>
+            <input type="date" name="birth_date" class="form-control" id="inputbirth"
+                   placeholder="{{ user.birth_date }}">
+        </div>
+        <div class="form-group col-md-6 mb-4">
+            <label for="inputEmail4">آدرس ایمیل</label>
+            <input type="email" class="form-control" id="inputEmail4"
+                   name="email" placeholder="{{ user.email }}">
+        </div>
+        <div class="form-group col-md-6 mb-4">
+            <label for="inpustate">استان</label>
+            <input name="state" type="text" class="form-control" id="inpustate"
+                   placeholder="{{ user.state }}">
+        </div>
+
+        <div class="form-group col-md-6 mb-4">
+            <label for="inputsity">شهر</label>
+            <input name="city" type="text" class="form-control" id="inputsity" placeholder="{{ user.city }}">
+        </div>
+
+        <div class="form-group col-md-6 mb-4">
+            <label for="inputurl">آدرس</label>
+            <input name="address" type="text" class="form-control" id="inputurl"
+                   placeholder="{{ user.address }}">
+        </div>
+        <div class="form-group col-md-6 mb-4">
+            <label for="inputcodepost">کد پستی</label>
+            <input name="post_code" type="text" class="form-control" id="inputcodepost"
+                   placeholder="{{ user.post_code }}">
+        </div>
+
+    </div>
+</form>

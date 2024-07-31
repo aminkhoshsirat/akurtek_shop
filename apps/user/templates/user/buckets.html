@@ -1,0 +1,125 @@
+<div class="header-tab-content-account d-sm-flex justify-content-between align-items-center mb-4">
+    <h1 class="title-tabcontent-account mb-3 mb-sm-0">
+        سفارش ها
+    </h1>
+    <div
+            class="box-select-sort d-flex align-items-center justify-content-start justify-content-sm-end">
+        <label class="lable-select-sort ms-2" for="FormCustomSelect">مرتب سازی براساس:
+        </label>
+        <select class="form-select custom-select" id="FormCustomSelect" aria-label="Default select example">
+            <option selected="">همه</option>
+            <option value="1">در حال پردازش</option>
+            <option value="2">تحویل داده</option>
+            <option value="3">لغو شده ها</option>
+        </select>
+    </div>
+</div>
+<div class="accordion area-Orders-account" id="accordionExample">
+    {% for bucket in buckets %}
+        <div class="accordion-item card card-Orders-account mb-3">
+            <h2 class="accordion-header card-header" id="headingOne">
+                <button class="accordion-button header-content-orders  d-sm-flex align-items-center justify-content-between"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                    <div class="id-product-order item-header-orders">dkc-65454555</div>
+                    <div class="date-order item-header-orders"><i
+                            class="fal fa-clock ms-1"></i>1399/10/15
+                    </div>
+                    <div class="stutus-order stutus-order-blue item-header-orders">درحال
+                        پردازش
+                    </div>
+                    <div class="price-product-order item-header-orders"> 150.000 تومان</div>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show  collapse-content-orders"
+                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body card-body">
+                    <div
+                            class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                        <div
+                                class="area-ditails_product-orders d-flex align-items-center flex-column flex-sm-row">
+                            <img src="images/shoes21.jpg" class="mb-3 mb-sm-0">
+                            <div class="ditails_product-orders me-3  text-center">
+                                <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                    روی</a>
+                                <div><span>سایز: </span>xl</div>
+                                <div><span>رنگ: </span>سفید</div>
+                            </div>
+                        </div>
+                        <div
+                                class="d-flex flex-row flex-sm-column justify-content-center align-items-center ">
+                            تعداد:
+                            <span>2</span></div>
+                        <div
+                                class="d-flex  flex-row flex-sm-column justify-content-center align-items-center">
+                            جمع کل:
+                            <span>1500000</span>
+                        </div>
+                    </div>
+
+                    <div
+                            class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                        <div
+                                class="area-ditails_product-orders d-flex align-items-center flex-column flex-sm-row">
+                            <img src="images/hedsetwireless.jpg" class="mb-3 mb-sm-0">
+                            <div class="ditails_product-orders me-3  text-center">
+                                <a href="#" class="nameproduct-orders mb-1">هدست بی سیم</a>
+                                <div><span>سایز: </span>xl</div>
+                                <div><span>رنگ: </span>سفید</div>
+                            </div>
+                        </div>
+                        <div
+                                class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                            تعداد:
+                            <span>2</span></div>
+                        <div
+                                class="d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                            جمع کل:
+                            <span>1500000</span>
+                        </div>
+                    </div>
+
+                    <div
+                            class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+
+                        <div
+                                class="details-bottom-content-orders details-bottom-content ms-3">
+                            <span>جمع کل: </span>
+                            <span>152000 تومان</span>
+                        </div>
+
+                        <div
+                                class="details-bottom-content-orders details-bottom-content ms-3">
+                            <span>حمل و نقل: </span>
+                            <span>15000 تومان</span>
+                        </div>
+
+                        <div
+                                class="details-bottom-content-orders details-bottom-content ms-3">
+                            <span>مالیات: </span>
+                            <span>6000 تومان</span>
+                        </div>
+                        <div
+                                class="details-bottom-content-orders details-bottom-content ms-3">
+                            <span>کل: </span>
+                            <span>173000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<div
+        class="area-btnOldOrders-showNamberOofOrders d-xl-flex  justify-content-xl-between  text-center pt-3">
+    <div
+            class="box-showNamberofOrders  mb-4 mb-xl-0  d-flex justify-content-center align-items-center ">
+        <span>نمایش 5 از 8 سفارش</span>
+        <div class="progress w-100 me-3">
+            <div class="progress-bar  progress-bar-striped progress-bar-animated"
+                 role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                 aria-valuemax="100" style="width: 75%;background-color:#766df4"></div>
+        </div>
+    </div>
+    <a class="btn-OldOrders " href="#">نمایش سفارش های بیشتر</a>
+</div>

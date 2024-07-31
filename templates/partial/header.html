@@ -2,8 +2,7 @@
     <nav class="area_navbar">
         <div class="container container_nav">
             <div class="row area_search align-items-center">
-                <div
-                        class="col-10 col-sm-7 col-md-8 col-lg-9  d-flex justify-content-between align-items-center border-start">
+                <div class="col-10 col-sm-7 col-md-8 col-lg-9  d-flex justify-content-between align-items-center border-start">
                     <form class="search-form d-flex w-100" action="" method="get">
                         <input type="text" class="form-control input_search " name="" value=""
                                placeholder="دنبال چه میگردید">
@@ -28,10 +27,11 @@
                             همه دسته بندی ها
                         </button>
                         <ul class="dropdown-menu dropdown-menu-all-category" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">دیجیتال</a></li>
-                            <li><a class="dropdown-item" href="#">کیف</a></li>
-                            <li><a class="dropdown-item" href="#">کفش</a></li>
-                            <li><a class="dropdown-item" href="#">آرایشی و بهداشتی</a></li>
+                            {% for category in categories %}
+                                <li><a class="dropdown-item"
+                                       href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+                            {% endfor %}
+
                         </ul>
                     </div>
 
@@ -79,89 +79,41 @@
                             </li>
                             <li class="menu-item-has-children"><a href="#">وبلاگ</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item-has-children"><a href="#">ساختمانی
-                                    </a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-masonry-four-columns.html">چهار ستون </a>
-                                            </li>
-                                            <li><a href="blog-masonry-left-sidebar.html">نوار کناری سمت چپ </a></li>
-                                            <li><a href="blog-masonry-right-sidebar.html">نوار کناری سمت راست </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><a href="#">جزییات وبلاگ </a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-single-left-sidebar.html">پیش فرض</a></li>
-                                            <li><a href="blog-single-right-sidebar.html">نوار کناری سمت راست</a>
-                                            </li>
-
-                                            <li><a href="blog-single.html">جزییات وبلاگ بدون سایدبار</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><a href="#">لیستی </a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-list-left-sidebar.html">نوار کناری سمت چپ</a></li>
-                                            <li><a href="blog-list-right-sidebar.html">نوار کناری سمت راست</a>
-                                            </li>
-
-                                            <li><a href="blog-list.html">لیستی بدون سایدبار</a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    {% for category in blog_categories %}
+                                        <li class="menu-item-has-children"><a
+                                                href="{{ category.get_absolute_url }}">{{ category.title }}
+                                        </a>
+                                            <ul class="sub-menu">
+                                                {% for child in category.category_child.all %}
+                                                    {% if child.active %}
+                                                        <li><a href="{{ child.get_absolute_url }}">{{ child.title }}</a>
+                                                    {% endif %}
+                                                </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </li>
 
                             <li class="menu-item-has-children"><a href="#">محصولات</a>
                                 <ul class="sub-menu">
-                                    <li class="mega-menu-col">
-                                        <a class="title-megamenu-mobile" href="#">لوازم دیجیتالی</a>
-                                        <ul>
-                                            <li><a href="#"> دوربین مدار بسته </a></li>
-                                            <li><a href="#">هدست</a></li>
-                                            <li><a href="#">تلویزیون hd</a></li>
-                                            <li><a href="#">موبایل</a></li>
-                                            <li><a href="#"> دوربین عکاسی</a></li>
-                                            <li><a href="#">وسایل جانبی موبایل</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="mega-menu-col">
-                                        <a class="title-megamenu-mobile" href="#">لباس و پوشاک</a>
-                                        <ul>
-                                            <li><a href="#"> مانتو</a></li>
-                                            <li><a href="#">شلوار</a></li>
-                                            <li><a href="#">پیراهن</a></li>
-                                            <li><a href="#">شال و روسری</a></li>
-                                            <li><a href="#">پالتو</a></li>
-                                            <li><a href="#">کت و شلوار</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="mega-menu-col">
-                                        <a class="title-megamenu-mobile" href="#">کیف</a>
-                                        <ul>
-                                            <li><a href="#">کیف زنانه</a></li>
-                                            <li><a href="#">کوله پشتی</a></li>
-                                            <li><a href="#">کیف اداری</a></li>
-                                            <li><a href="#">کیف جیبی</a></li>
-                                            <li><a href="#"> کیف رو دوشی</a></li>
-                                            <li><a href="#">کیف دستی</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mega-menu-col">
-                                        <a class="title-megamenu-mobile" href="#">کفش</a>
-                                        <ul>
-                                            <li><a href="#">کفش اسپرست</a></li>
-                                            <li><a href="#">کفش ورزشی</a></li>
-                                            <li><a href="#">کفش مجلسی</a></li>
-                                            <li><a href="#">کفش تخت</a></li>
-                                        </ul>
-                                    </li>
+                                    {% for category in categories %}
+                                        <li class="mega-menu-col">
+                                            <a class="title-megamenu-mobile"
+                                               href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+                                            <ul>
+                                                {% for child in category.base_category_child.all %}
+                                                    {% if child.base == None and child.active %}
+                                                        <li><a href="{{ child.get_absolute_url }}">{{ child.title }}</a>
+                                                        </li>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </li>
-
-
                             <li class="menu-item-has-children"><a href="#">فروشگاه</a>
                                 <ul class="sub-menu">
                                     <li class="mega-menu-col">
@@ -230,38 +182,21 @@
                             </li>
                             <li><a href="#">وبلاگ<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="#">ساختمانی <i class="fal fa-angle-left"></i>
-                                    </a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-masonry-four-columns.html">چهار ستون </a>
-                                            </li>
-                                            <li><a href="blog-masonry-left-sidebar.html">نوار کناری سمت چپ </a>
-                                            </li>
-                                            <li><a href="blog-masonry-right-sidebar.html">نوار کناری سمت راست
-                                            </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">جزییات وبلاگ <i class="fal fa-angle-left"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-single-left-sidebar.html">پیش فرض</a></li>
-                                            <li><a href="blog-single-right-sidebar.html">نوار کناری سمت راست</a>
-                                            </li>
+                                    {% for category in blog_categories %}
+                                        <li><a href="{{ category.get_absolute_url }}">{{ category.title }} <i
+                                                class="fal fa-angle-left"></i>
+                                        </a>
+                                            <ul class="sub-menu">
+                                                {% for child in category.category_child.all %}
+                                                    {% if child.active %}
+                                                        <li><a href="{{ child.get_absolute_url }}">{{ child.title }}</a>
+                                                        </li>
+                                                    {% endif %}
+                                                {% endfor %}
 
-                                            <li><a href="blog-single.html">جزییات وبلاگ بدون سایدبار</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">لیستی <i class="fal fa-angle-left"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-list-left-sidebar.html">نوار کناری سمت چپ</a></li>
-                                            <li><a href="blog-list-right-sidebar.html">نوار کناری سمت راست</a>
-                                            </li>
-
-                                            <li><a href="blog-list.html">لیستی بدون سایدبار</a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                            </ul>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </li>
                             <li class="container-mega-menu"><a href="#">محصولات
@@ -270,48 +205,21 @@
                                 <div class="area-megamenu">
                                     <div class="row">
                                         <div class="col-12 d-flex mb-4">
-                                            <div class="mega-menu-col col-3">
-                                                <a class="title_megamenu" href="#">لوازم دیجیتالی</a>
-                                                <ul>
-                                                    <li><a href="#"> دوربین مدار بسته </a></li>
-                                                    <li><a href="#">هدست</a></li>
-                                                    <li><a href="#">تلویزیون hd</a></li>
-                                                    <li><a href="#">موبایل</a></li>
-                                                    <li><a href="#"> دوربین عکاسی</a></li>
-                                                    <li><a href="#">وسایل جانبی موبایل</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="mega-menu-col col-3">
-                                                <a class="title_megamenu" href="#">لباس و پوشاک</a>
-                                                <ul>
-                                                    <li><a href="#"> مانتو</a></li>
-                                                    <li><a href="#">شلوار</a></li>
-                                                    <li><a href="#">پیراهن</a></li>
-                                                    <li><a href="#">شال و روسری</a></li>
-                                                    <li><a href="#">پالتو</a></li>
-                                                    <li><a href="#">کت و شلوار</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="mega-menu-col col-3">
-                                                <a class="title_megamenu" href="#">کیف</a>
-                                                <ul>
-                                                    <li><a href="#">کیف زنانه</a></li>
-                                                    <li><a href="#">کوله پشتی</a></li>
-                                                    <li><a href="#">کیف اداری</a></li>
-                                                    <li><a href="#">کیف جیبی</a></li>
-                                                    <li><a href="#"> کیف رو دوشی</a></li>
-                                                    <li><a href="#">کیف دستی</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="mega-menu-col col-3 ">
-                                                <a class="title_megamenu" href="#">کفش</a>
-                                                <ul>
-                                                    <li><a href="#">کفش اسپرست</a></li>
-                                                    <li><a href="#">کفش ورزشی</a></li>
-                                                    <li><a href="#">کفش مجلسی</a></li>
-                                                    <li><a href="#">کفش تخت</a></li>
-                                                </ul>
-                                            </div>
+                                            {% for category in categories %}
+                                                <div class="mega-menu-col col-3">
+                                                    <a class="title_megamenu"
+                                                       href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+                                                    <ul>
+                                                        {% for child in category.base_category_child.all %}
+                                                            {% if child.base == None and child.active %}
+                                                                <li>
+                                                                    <a href="{{ child.get_absolute_url }}">{{ child.title }}</a>
+                                                                </li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            {% endfor %}
                                         </div>
 
                                         <div class="mega-menu-col col-4">
@@ -403,144 +311,130 @@
                                     </svg>
                                 </span>
                         </div>
-                        <div class="border-end"></div>
-                        <div class="main-nav d-none d-sm-none mx-2 d-md-block icon_login_user item_widget_navbar">
-                            <ul>
-                                <!-- inser more links here -->
-                                <li><a class="cd-signin" href="#0"><i class="fal fa-user"></i></a></li>
-                                <!-- <li><a class="cd-signup" href="#0">Sign up</a></li> -->
-                            </ul>
-                        </div>
-                        <div class="cd-user-modal">
-                            <!-- this is the entire modal form, including the background -->
-                            <div class="cd-user-modal-container">
-                                <!-- this is the container wrapper -->
-                                <ul class="cd-switcher">
-                                    <li><a href="#0">ورود</a></li>
-                                    <li><a href="#0">ثبت نام</a></li>
-                                </ul>
-                                <div id="cd-login">
-                                    <!-- log in form -->
-                                    <h1 class="text-center d-none d-sm-block">با استفاده از ایمیل و رمز عبور به حساب
-                                        خود
-                                        وارد شوید</h1>
 
-                                    <form class="form-modal">
-                                        <fieldset>
-                                            <div class="group">
-                                                <input required="" class="input" type="text"><span
-                                                    class="highlight"></span><span class="bar"></span>
-                                                <label class="label" for="date">آدرس ایمیل</label>
-                                            </div>
-                                            <div class="group">
-                                                <input required="" class="input inputpassword" type="password"
-                                                       name="key"><span class="highlight"></span><span
-                                                    class="bar"></span>
-                                                <label class="label" for="date">رمز عبور</label>
-                                            </div>
-                                            <div
-                                                    class="forget_show-hide_password d-block d-sm-flex justify-content-between mt-3  align-items-center">
-                                                <div class="form-check showPasswork-checkbox my-3 my-sm-0">
+                        {% if user.is_authenticated %}
+
+                        {% else %}
+
+
+
+                            <div class="cd-user-modal">
+                                <!-- this is the entire modal form, including the background -->
+                                <div class="cd-user-modal-container">
+                                    <!-- this is the container wrapper -->
+                                    <ul class="cd-switcher">
+                                        <li><a href="#0">ورود</a></li>
+                                        <li><a href="#0">ثبت نام</a></li>
+                                    </ul>
+                                    <div id="cd-login">
+                                        <!-- log in form -->
+
+                                        <form class="form-modal">
+                                            <fieldset>
+                                                <div class="group">
+                                                    <input required="" class="input" type="text"><span
+                                                        class="highlight"></span><span class="bar"></span>
+                                                    <label class="label" for="date">تلفن</label>
+                                                </div>
+                                                <div class="group">
+                                                    <input required="" class="input inputpassword" type="password"
+                                                           name="key"><span class="highlight"></span><span
+                                                        class="bar"></span>
+                                                    <label class="label" for="date">رمز عبور</label>
+                                                </div>
+                                                <div
+                                                        class="forget_show-hide_password d-block d-sm-flex justify-content-between mt-3  align-items-center">
+                                                    <div class="form-check showPasswork-checkbox my-3 my-sm-0">
+                                                        <input type="checkbox" class="form-check-input ms-1"
+                                                               id="checkbox-login" onclick="showPassword()">
+                                                        <label class="form-check-label" for="checkbox-login">نمایش
+                                                            رمز عبور</label>
+                                                    </div>
+                                                    <div class="forget_password">
+                                                        <p class="cd-form-bottom-message"><a href="#0">رمز خود را
+                                                            فراموش
+                                                            کردید؟</a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label class="control-label" for="signin"></label>
+                                                    <div class="controls  mt-4  mt-sm-5 mb-2">
+                                                        <button id="signin" name="signin" class="btn-5">ورود</button>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div> <!-- cd-login -->
+                                    <div id="cd-signup">
+                                        <!-- sign up form -->
+                                        <form class="form-modal">
+                                            <fieldset>
+                                                <!-- Sign Up Form -->
+                                                <!-- Text input-->
+                                                <div class="group mt-0">
+                                                    <input required="" class="input" type="text"><span
+                                                        class="highlight"></span><span class="bar"></span>
+                                                    <label class="label" for="date">نام</label></div>
+                                                <!-- Password input-->
+                                                <div class="group">
+                                                    <input required="" class="input" type="text"><span
+                                                        class="highlight"></span><span class="bar"></span>
+                                                    <label class="label" for="date">ایمیل</label></div>
+                                                <!-- Text input-->
+                                                <div class="group">
+                                                    <input required="" class="input inputpassword" type="password"
+                                                           name="key"><span class="highlight"></span><span
+                                                        class="bar"></span>
+                                                    <label class="label" for="date">رمز عبور</label>
+                                                </div>
+                                                <div class="form-check showPasswork-checkbox mt-3">
                                                     <input type="checkbox" class="form-check-input ms-1"
-                                                           id="checkbox-login" onclick="showPassword()">
-                                                    <label class="form-check-label" for="checkbox-login">نمایش
+                                                           id="checkbox-sign-up" onclick="showPassword()">
+                                                    <label class="form-check-label" for="checkbox-sign-up">نمایش
                                                         رمز عبور</label>
                                                 </div>
-                                                <div class="forget_password">
-                                                    <p class="cd-form-bottom-message"><a href="#0">رمز خود را
-                                                        فراموش
-                                                        کردید؟</a></p>
+                                                <!-- Button -->
+                                                <div class="control-group">
+                                                    <label class="control-label" for="confirmsignup"></label>
+                                                    <div class="controls mt-4  mt-sm-5 mb-2">
+                                                        <button id="confirmsignup" name="confirmsignup"
+                                                                class="btn-5">ثبت
+                                                            نام
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="control-group">
-                                                <label class="control-label" for="signin"></label>
-                                                <div class="controls  mt-4  mt-sm-5 mb-2">
-                                                    <button id="signin" name="signin" class="btn-5">ورود</button>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div> <!-- cd-login -->
-                                <div id="cd-signup">
-                                    <!-- sign up form -->
-                                    <form class="form-modal">
-                                        <fieldset>
-                                            <!-- Sign Up Form -->
-                                            <!-- Text input-->
-                                            <div class="group mt-0">
-                                                <input required="" class="input" type="text"><span
-                                                    class="highlight"></span><span class="bar"></span>
-                                                <label class="label" for="date">نام</label></div>
-                                            <!-- Password input-->
-                                            <div class="group">
-                                                <input required="" class="input" type="text"><span
-                                                    class="highlight"></span><span class="bar"></span>
-                                                <label class="label" for="date">ایمیل</label></div>
-                                            <!-- Text input-->
-                                            <div class="group">
-                                                <input required="" class="input inputpassword" type="password"
-                                                       name="key"><span class="highlight"></span><span
-                                                    class="bar"></span>
-                                                <label class="label" for="date">رمز عبور</label>
-                                            </div>
-                                            <div class="form-check showPasswork-checkbox mt-3">
-                                                <input type="checkbox" class="form-check-input ms-1"
-                                                       id="checkbox-sign-up" onclick="showPassword()">
-                                                <label class="form-check-label" for="checkbox-sign-up">نمایش
-                                                    رمز عبور</label>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="control-group">
-                                                <label class="control-label" for="confirmsignup"></label>
-                                                <div class="controls mt-4  mt-sm-5 mb-2">
-                                                    <button id="confirmsignup" name="confirmsignup"
-                                                            class="btn-5">ثبت
-                                                        نام
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div> <!-- cd-signup -->
-                                <div id="cd-reset-password">
-                                    <!-- reset password form -->
-                                    <h4 class="modal-title text-center" id="myModalLabel">رمز عبور به ایمیل شما
-                                        ارسال می شود</h4>
-                                    <form class="form-modal">
-                                        <fieldset>
-                                            <div class="group">
-                                                <input required="" class="input" type="text">
-                                                <span class="highlight"></span><span class="bar">
+                                            </fieldset>
+                                        </form>
+                                    </div> <!-- cd-signup -->
+                                    <div id="cd-reset-password">
+                                        <!-- reset password form -->
+                                        <h4 class="modal-title text-center" id="myModalLabel">رمز عبور به ایمیل شما
+                                            ارسال می شود</h4>
+                                        <form class="form-modal">
+                                            <fieldset>
+                                                <div class="group">
+                                                    <input required="" class="input" type="text">
+                                                    <span class="highlight"></span><span class="bar">
 
                                                     </span>
-                                                <label class="label" for="date">آدرس ایمیل</label>
-                                            </div>
-                                            <div class="control-group mt-5 mb-3">
-                                                <label class="control-label" for="forpassword"></label>
-                                                <div class="controls">
-                                                    <button id="forpasswodr" name="forpassword"
-                                                            class="btn-5">ارسال
-                                                    </button>
+                                                    <label class="label" for="date">آدرس ایمیل</label>
                                                 </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div> <!-- cd-reset-password -->
-                                <div class="modal-footer">
-                                    <div class="area-socialIcon d-flex justify-content-center w-100">
-                                        <a href="http://www.facebook.com" class="icon facebook"><span
-                                                class="tooltip-site">Facebook</span></a>
-                                        <a href="http://www.github.com" class="icon instegram"><span
-                                                class="tooltip-site">instegram</span></a>
-                                        <a href="http://www.dribble.com" class="icon linkedin"><span
-                                                class="tooltip-site">linkedin</span></a>
-                                        <a href="http://www.twitter.com" class="icon twitter"><span
-                                                class="tooltip-site">Twitter</span></a>
-                                    </div>
-                                </div>
-                            </div> <!-- cd-user-modal-container -->
-                        </div> <!-- cd-user-modal -->
-                        <div class="border-end "></div>
+                                                <div class="control-group mt-5 mb-3">
+                                                    <label class="control-label" for="forpassword"></label>
+                                                    <div class="controls">
+                                                        <button id="forpasswodr" name="forpassword"
+                                                                class="btn-5">ارسال
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div> <!-- cd-reset-password -->
+
+                                </div> <!-- cd-user-modal-container -->
+                            </div> <!-- cd-user-modal -->
+                        {% endif %}
+
                         <div class="shooping-cat item_widget_navbar me-4">
                             <a href="#">
                                 <i class="fal fa-shopping-cart"></i>
@@ -737,10 +631,10 @@
                             همه دسته بندی ها
                         </button>
                         <ul class="dropdown-menu dropdown-menu-all-category" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">دیجیتال</a></li>
-                            <li><a class="dropdown-item" href="#">کیف</a></li>
-                            <li><a class="dropdown-item" href="#">کفش</a></li>
-                            <li><a class="dropdown-item" href="#">آرایشی و بهداشتی</a></li>
+                            {% for category in categories %}
+                                <li><a class="dropdown-item"
+                                       href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <button type="button" class="btn-close close_search_header" aria-label="Close"></button>
@@ -891,38 +785,21 @@
                             </li>
                             <li><a href="#">وبلاگ<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="#">ساختمانی <i class="fal fa-angle-left"></i>
-                                    </a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-masonry-four-columns.html">چهار ستون </a>
-                                            </li>
-                                            <li><a href="blog-masonry-left-sidebar.html">نوار کناری سمت چپ </a>
-                                            </li>
-                                            <li><a href="blog-masonry-right-sidebar.html">نوار کناری سمت راست
-                                            </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">جزییات وبلاگ <i class="fal fa-angle-left"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-single-left-sidebar.html">پیش فرض</a></li>
-                                            <li><a href="blog-single-right-sidebar.html">نوار کناری سمت راست</a>
-                                            </li>
+                                    {% for category in blog_categories %}
+                                        <li><a href="{{ category.get_absolute_url }}">{{ category.title }}<i
+                                                class="fal fa-angle-left"></i>
+                                        </a>
+                                            <ul class="sub-menu">
+                                                {% for child in category.category_child.all %}
+                                                    {% if child.active %}
+                                                        <li><a href="{{ child.get_absolute_url }}">{{ child.title }}</a>
+                                                        </li>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                    {% endfor %}
 
-                                            <li><a href="blog-single.html">جزییات وبلاگ بدون سایدبار</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">لیستی <i class="fal fa-angle-left"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-list-left-sidebar.html">نوار کناری سمت چپ</a></li>
-                                            <li><a href="blog-list-right-sidebar.html">نوار کناری سمت راست</a>
-                                            </li>
-
-                                            <li><a href="blog-list.html">لیستی بدون سایدبار</a>
-                                            </li>
-                                        </ul>
-                                    </li>
                                 </ul>
                             </li>
                             <li class="container-mega-menu"><a href="#">محصولات
@@ -931,23 +808,21 @@
                                 <div class="area-megamenu">
                                     <div class="row">
                                         <div class="col-12 d-flex mb-4">
-
-
-                                            <div class="mega-menu-col col-3">
-                                                <a class="title_megamenu" href="#">لوازم دیجیتالی</a>
-                                                <ul>
-                                                    <li><a href="#"> دوربین مدار بسته </a></li>
-                                                    <li><a href="#">هدست</a></li>
-                                                    <li><a href="#">تلویزیون hd</a></li>
-                                                    <li><a href="#">موبایل</a></li>
-                                                    <li><a href="#"> دوربین عکاسی</a></li>
-                                                    <li><a href="#">وسایل جانبی موبایل</a></li>
-                                                </ul>
-                                            </div>
-
-
+                                            {% for category in categories %}
+                                                <div class="mega-menu-col col-3">
+                                                    <a class="title_megamenu" href="#">{{ category.title }}</a>
+                                                    <ul>
+                                                        {% for child in category.base_category_child.all %}
+                                                            {% if child.base == None and child.active %}
+                                                                <li>
+                                                                    <a href="{{ child.get_absolute_url }}">{{ child.title }}</a>
+                                                                </li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            {% endfor %}
                                         </div>
-
                                         <div class="mega-menu-col col-4">
                                             <div class="baner-megamenu">
                                                 <a href="shop-left-sidebar.html"> <img class="img-fluid"
@@ -1045,132 +920,135 @@
                                 <!-- <li><a class="cd-signup" href="#0">Sign up</a></li> -->
                             </ul>
                         </div>
-                        <div class="cd-user-modal">
-                            <!-- this is the entire modal form, including the background -->
-                            <div class="cd-user-modal-container">
-                                <!-- this is the container wrapper -->
-                                <ul class="cd-switcher">
-                                    <li><a href="#0">ورود</a></li>
-                                    <li><a href="#0">ثبت نام</a></li>
-                                </ul>
-                                <div id="cd-login">
-                                    <!-- log in form -->
-                                    <h1 class="text-center">با استفاده از ایمیل و رمز عبور به حساب خود
-                                        وارد شوید</h1>
-                                    <form class="form-modal">
-                                        <fieldset>
-                                            <div class="group">
-                                                <input required="" class="input" type="text"><span
-                                                    class="highlight"></span><span class="bar"></span>
-                                                <label class="label" for="date">آدرس ایمیل</label>
-                                            </div>
-                                            <div class="group">
-                                                <input required="" class="input inputpassword" type="password"
-                                                       name="key"><span class="highlight"></span><span
-                                                    class="bar"></span>
-                                                <label class="label" for="date">رمز عبور</label>
-                                            </div>
-                                            <div
-                                                    class="forget_show-hide_password d-flex justify-content-between mt-3  align-items-center">
-                                                <div class="form-check showPasswork-checkbox my-3 my-sm-0">
+                        {% if user.is_authenticated %}
+                        {% else %}
+                            <div class="cd-user-modal">
+                                <!-- this is the entire modal form, including the background -->
+                                <div class="cd-user-modal-container">
+                                    <!-- this is the container wrapper -->
+                                    <ul class="cd-switcher">
+                                        <li><a href="#0">ورود</a></li>
+                                        <li><a href="#0">ثبت نام</a></li>
+                                    </ul>
+                                    <div id="cd-login">
+                                        <!-- log in form -->
+                                        <h1 class="text-center">با استفاده از ایمیل و رمز عبور به حساب خود
+                                            وارد شوید</h1>
+                                        <form class="form-modal">
+                                            <fieldset>
+                                                <div class="group">
+                                                    <input required="" class="input" type="text"><span
+                                                        class="highlight"></span><span class="bar"></span>
+                                                    <label class="label" for="date">آدرس ایمیل</label>
+                                                </div>
+                                                <div class="group">
+                                                    <input required="" class="input inputpassword" type="password"
+                                                           name="key"><span class="highlight"></span><span
+                                                        class="bar"></span>
+                                                    <label class="label" for="date">رمز عبور</label>
+                                                </div>
+                                                <div
+                                                        class="forget_show-hide_password d-flex justify-content-between mt-3  align-items-center">
+                                                    <div class="form-check showPasswork-checkbox my-3 my-sm-0">
+                                                        <input type="checkbox" class="form-check-input ms-1"
+                                                               id="checkbox-login" onclick="showPassword()">
+                                                        <label class="form-check-label" for="checkbox-login">نمایش رمز
+                                                            عبور</label>
+                                                    </div>
+                                                    <div class="forget_password">
+                                                        <p class="cd-form-bottom-message"><a href="#0">رمز خود را
+                                                            فراموش
+                                                            کردید؟</a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label class="control-label" for="signin"></label>
+                                                    <div class="controls mt-4  mt-sm-5 mb-2">
+                                                        <button id="signin" name="signin" class="btn-5">ورود</button>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div> <!-- cd-login -->
+                                    <div id="cd-signup">
+                                        <!-- sign up form -->
+                                        <form class="form-modal">
+                                            <fieldset>
+                                                <!-- Sign Up Form -->
+                                                <!-- Text input-->
+                                                <div class="group mt-0">
+                                                    <input required="" class="input" type="text"><span
+                                                        class="highlight"></span><span class="bar"></span>
+                                                    <label class="label" for="date">نام</label></div>
+                                                <!-- Password input-->
+                                                <div class="group">
+                                                    <input required="" class="input" type="text"><span
+                                                        class="highlight"></span><span class="bar"></span>
+                                                    <label class="label" for="date">ایمیل</label></div>
+                                                <!-- Text input-->
+                                                <div class="group">
+                                                    <input required="" class="input inputpassword" type="password"
+                                                           name="key"><span class="highlight"></span><span
+                                                        class="bar"></span>
+                                                    <label class="label" for="date">رمز عبور</label>
+                                                </div>
+                                                <div class="form-check showPasswork-checkbox mt-3">
                                                     <input type="checkbox" class="form-check-input ms-1"
-                                                           id="checkbox-login" onclick="showPassword()">
-                                                    <label class="form-check-label" for="checkbox-login">نمایش رمز
-                                                        عبور</label>
+                                                           id="checkbox-sign-up" onclick="showPassword()">
+                                                    <label class="form-check-label" for="checkbox-sign-up">نمایش
+                                                        رمز عبور</label>
                                                 </div>
-                                                <div class="forget_password">
-                                                    <p class="cd-form-bottom-message"><a href="#0">رمز خود را
-                                                        فراموش
-                                                        کردید؟</a></p>
+                                                <!-- Button -->
+                                                <div class="control-group">
+                                                    <label class="control-label" for="confirmsignup"></label>
+                                                    <div class="controls mt-4  mt-sm-5 mb-2">
+                                                        <button id="confirmsignup" name="confirmsignup"
+                                                                class="btn-5">ثبت
+                                                            نام
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="control-group">
-                                                <label class="control-label" for="signin"></label>
-                                                <div class="controls mt-4  mt-sm-5 mb-2">
-                                                    <button id="signin" name="signin" class="btn-5">ورود</button>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div> <!-- cd-login -->
-                                <div id="cd-signup">
-                                    <!-- sign up form -->
-                                    <form class="form-modal">
-                                        <fieldset>
-                                            <!-- Sign Up Form -->
-                                            <!-- Text input-->
-                                            <div class="group mt-0">
-                                                <input required="" class="input" type="text"><span
-                                                    class="highlight"></span><span class="bar"></span>
-                                                <label class="label" for="date">نام</label></div>
-                                            <!-- Password input-->
-                                            <div class="group">
-                                                <input required="" class="input" type="text"><span
-                                                    class="highlight"></span><span class="bar"></span>
-                                                <label class="label" for="date">ایمیل</label></div>
-                                            <!-- Text input-->
-                                            <div class="group">
-                                                <input required="" class="input inputpassword" type="password"
-                                                       name="key"><span class="highlight"></span><span
-                                                    class="bar"></span>
-                                                <label class="label" for="date">رمز عبور</label>
-                                            </div>
-                                            <div class="form-check showPasswork-checkbox mt-3">
-                                                <input type="checkbox" class="form-check-input ms-1"
-                                                       id="checkbox-sign-up" onclick="showPassword()">
-                                                <label class="form-check-label" for="checkbox-sign-up">نمایش
-                                                    رمز عبور</label>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="control-group">
-                                                <label class="control-label" for="confirmsignup"></label>
-                                                <div class="controls mt-4  mt-sm-5 mb-2">
-                                                    <button id="confirmsignup" name="confirmsignup"
-                                                            class="btn-5">ثبت
-                                                        نام
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div> <!-- cd-signup -->
-                                <div id="cd-reset-password">
-                                    <!-- reset password form -->
-                                    <h4 class="modal-title text-center" id="myModalLabel">رمز عبور به ایمیل شما
-                                        ارسال می شود</h4>
-                                    <form class="form-modal">
-                                        <fieldset>
-                                            <div class="group">
-                                                <input required="" class="input" type="text">
-                                                <span class="highlight"></span><span class="bar">
+                                            </fieldset>
+                                        </form>
+                                    </div> <!-- cd-signup -->
+                                    <div id="cd-reset-password">
+                                        <!-- reset password form -->
+                                        <h4 class="modal-title text-center" id="myModalLabel">رمز عبور به ایمیل شما
+                                            ارسال می شود</h4>
+                                        <form class="form-modal">
+                                            <fieldset>
+                                                <div class="group">
+                                                    <input required="" class="input" type="text">
+                                                    <span class="highlight"></span><span class="bar">
                                                     </span>
-                                                <label class="label" for="date">آدرس ایمیل</label>
-                                            </div>
-                                            <div class="control-group mt-5 mb-3">
-                                                <label class="control-label" for="forpassword"></label>
-                                                <div class="controls">
-                                                    <button id="forpasswodr" name="forpassword"
-                                                            class="btn-5">ارسال
-                                                    </button>
+                                                    <label class="label" for="date">آدرس ایمیل</label>
                                                 </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div> <!-- cd-reset-password -->
-                                <div class="modal-footer">
-                                    <div class="area-socialIcon d-flex justify-content-center w-100">
-                                        <a href="http://www.facebook.com" class="icon facebook"><span
-                                                class="tooltip-site">Facebook</span></a>
-                                        <a href="http://www.github.com" class="icon instegram"><span
-                                                class="tooltip-site">instegram</span></a>
-                                        <a href="http://www.dribble.com" class="icon linkedin"><span
-                                                class="tooltip-site">linkedin</span></a>
-                                        <a href="http://www.twitter.com" class="icon twitter"><span
-                                                class="tooltip-site">Twitter</span></a>
+                                                <div class="control-group mt-5 mb-3">
+                                                    <label class="control-label" for="forpassword"></label>
+                                                    <div class="controls">
+                                                        <button id="forpasswodr" name="forpassword"
+                                                                class="btn-5">ارسال
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div> <!-- cd-reset-password -->
+                                    <div class="modal-footer">
+                                        <div class="area-socialIcon d-flex justify-content-center w-100">
+                                            <a href="http://www.facebook.com" class="icon facebook"><span
+                                                    class="tooltip-site">Facebook</span></a>
+                                            <a href="http://www.github.com" class="icon instegram"><span
+                                                    class="tooltip-site">instegram</span></a>
+                                            <a href="http://www.dribble.com" class="icon linkedin"><span
+                                                    class="tooltip-site">linkedin</span></a>
+                                            <a href="http://www.twitter.com" class="icon twitter"><span
+                                                    class="tooltip-site">Twitter</span></a>
+                                        </div>
                                     </div>
-                                </div>
-                            </div> <!-- cd-user-modal-container -->
-                        </div> <!-- cd-user-modal -->
+                                </div> <!-- cd-user-modal-container -->
+                            </div> <!-- cd-user-modal -->
+                        {% endif %}
                         <div class="border-end "></div>
                         <div class="shooping-cat item_widget_navbar me-4">
                             <a href="#">
@@ -1190,8 +1068,6 @@
                                     خرید</a></h4>
                             </div>
                             <div class="body_add-t-cart p-4">
-
-
 
 
                                 <div class="row mb-4">
@@ -1220,8 +1096,6 @@
                                                 class="tooltip-site">حذف</span></a></div>
                                     </div>
                                 </div>
-
-
 
 
                             </div>
